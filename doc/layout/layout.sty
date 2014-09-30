@@ -1,66 +1,50 @@
-% coding:utf-8
+% Layouteinstellungen für alle Dokumente
 
-%----------------------------------------
-%FOSAMATH, a LaTeX-Code for a mathematical summary for basic analysis
-%Copyright (C) 2013, Daniel Winz, Ervin Mazlagic, Adrian Imboden, Philipp Langer
+% Encoding
+    \usepackage[utf8]{inputenc} % für input utf8
+    \usepackage[T1]{fontenc}    % Schriftcodierung mit UTF-8
+    \usepackage{textcomp}       % Erweiterung von fontenc
+    \usepackage{lmodern}        % Erweiterung des Zeichensatzes
 
-%This program is free software; you can redistribute it and/or
-%modify it under the terms of the GNU General Public License
-%as published by the Free Software Foundation; either version 2
-%of the License, or (at your option) any later version.
+% Anpassungen für die Deutsche
+    \usepackage[ngerman]{babel} % Neue deutsche Rechtschreibung
 
-%This program is distributed in the hope that it will be useful,
-%but WITHOUT ANY WARRANTY; without even the implied warranty of
-%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-%GNU General Public License for more details.
-%----------------------------------------
+% Tabellen
+    \usepackage{longtable}  % Seitenübergreifende Tabellen
+    \usepackage{multirow}   % Zeilen zusammenfassen
 
-% coding:utf-8
-\usepackage[utf8]{inputenc} % für input utf8
-\usepackage[T1]{fontenc} %Schriftcodierung mit UTF-8
-\usepackage{textcomp} %Erweiterung von fontenc
-\usepackage{lmodern} %Erweiterung des Zeichensatzes
+% Grafiken
+    \usepackage{graphicx}   % Grafiken einbinden
+    \usepackage{pdfpages}   % PDF Seiten einbinden
+    \usepackage{caption}    % Bildunterschrift
+    \usepackage{subcaption} % Bildunterschrift unter zusammen dargestellten Bildern
+    \usepackage{tikz}       % TikZ - "TikZ ist kein Zeichenprogramm"
 
-\usepackage{graphics}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage[ngerman]{babel}
-\usepackage{amsmath}
-\usepackage{makeidx}
-\usepackage{pdfpages}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{amssymb}
-\usepackage{ifthen}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage{tikz}
-\usetikzlibrary{circuits.ee.IEC}
-\usetikzlibrary{circuits.logic.IEC}
-\usepackage{tikz-timing}
-\usepackage[
-	european,
-	europeanvoltages,
-	europeanresistors,
-	europeanports
-	]{circuitikz}
-\usepackage{venndiagram}
+% Mathematik
+    \usepackage{amsmath}    % Strukturierung von Formeln
+    \usepackage{amssymb}    % Sonderzeichen für Formeln
 
-\usepackage{color}
-\usepackage{colortbl}
-\definecolor{gray}{gray}{0.749}
-\definecolor{lgray}{gray}{0.85}
-\definecolor{red}{rgb}{1, 0, 0}
-\definecolor{green}{rgb}{0, 1, 0}
-\definecolor{blue}{rgb}{0, 0, 1}
+% Verweise
+    \usepackage{makeidx}    % Index
+    \usepackage{hyperref}   % Verlinkte interne und externe Verweise
+
+% Farben
+    \usepackage{color}      % Farben
+    \usepackage{colortbl}   % Tabellen einfärben
+
+% Eigene definierte Farben
+    \definecolor{gray}      {gray}  {0.749}
+    \definecolor{lgray}     {gray}  {0.85}
+    \definecolor{red}       {rgb}   {1 ,  0  , 0}
+    \definecolor{green}     {rgb}   {0 ,  1  , 0}
+    \definecolor{blue}      {rgb}   {0 ,  0  , 1}
+    \definecolor{darkgreen} {rgb}   {0 , 0.6 , 0}
 
 % Source-Code Paket
-\definecolor{darkgreen}{rgb}{0,0.6,0}
-\usepackage{listings}
-\lstset{language=[LaTeX]TeX}
-\lstloadlanguages{TeX}
-\lstset{basicstyle=\ttfamily,
+    \usepackage{listings}
+    \lstset{language=[LaTeX]TeX}
+    \lstloadlanguages{TeX}
+    \lstset{basicstyle=\ttfamily,
         numbers=left,
         numberstyle=\tiny, 
         numbersep=5pt,
@@ -88,45 +72,88 @@
                  {ä}{{\"a}}1
                  {ö}{{\"o}}1 }
 
-% \newboolean{ti}
-% \newboolean{nspire}
-% \newboolean{tiboth}
+% Bedingungen
+    \usepackage{ifthen}     % Verzweigungen
 
-\newcommand{\schscale}{0.70}
-\newcommand{\schscalesmall}{0.55}
+% Benutzerdefinierte Kopf- und Fusszeile
+    \usepackage{fancyhdr}   % http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Customising_with_fancyhdr
 
-\DeclareMathOperator{\arccot}{arccot}
-\DeclareMathOperator{\arccosh}{arccosh}
+% Ränder
+    % Ränder für Artikel
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{article}{
+        % TODO: Define all dimensions below!!!
+        % \addtolength{\textheight}{3.5cm}
+        % \addtolength{\voffset}{-1.5cm}
+        % \addtolength{\textwidth}{1cm}
+        % \addtolength{\evensidemargin}{-15mm}
+        % \addtolength{\oddsidemargin}{5mm}
 
-\usepackage{fancyhdr}                        % http://en.wikibooks.org/wiki/LaTeX/Page_Layout#Customising_with_fancyhdr
+        % \addtolength{\textheight}{\topmargin-\evensidemargin-\hoffset+\voffset}
+        % \setlength{\topmargin}{\evensidemargin+\hoffset-\voffset}
 
-\pagestyle{fancy} %eigener Seitenstil
-\fancyhf{} %alle Kopf- und Fusszeilenfelder bereinigen
+        % \addtolength{\headwidth}{1cm}
+    }{}
+    \makeatother        % @ wieder anderes Zeichen
 
-\addtolength{\textheight}{3.5cm}
-\addtolength{\voffset}{-1.5cm}
-\addtolength{\textwidth}{1cm}
-\addtolength{\evensidemargin}{-15mm}
-\addtolength{\oddsidemargin}{5mm}
+    % Ränder für Bücher
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{book}{
+        % TODO: Define all dimensions below!!!
+        % \addtolength{\textheight}{3.5cm}
+        % \addtolength{\voffset}{-1.5cm}
+        % \addtolength{\textwidth}{1cm}
+        % \addtolength{\evensidemargin}{-15mm}
+        % \addtolength{\oddsidemargin}{5mm}
 
-\addtolength{\textheight}{\topmargin-\evensidemargin-\hoffset+\voffset}
-\setlength{\topmargin}{\evensidemargin+\hoffset-\voffset}
+        % \addtolength{\textheight}{\topmargin-\evensidemargin-\hoffset+\voffset}
+        % \setlength{\topmargin}{\evensidemargin+\hoffset-\voffset}
 
-\addtolength{\headwidth}{1cm}
+        % \addtolength{\headwidth}{1cm}
+    }{}
+    \makeatother        % @ wieder anderes Zeichen
 
-%\rhead{\setlength{\unitlength}{1mm}
-%\begin{picture}(-2,7)
-%    \includegraphics[width=35mm]{../fig/hslu_logo2.PNG}
-%\end{picture}}
+%  Inhalt Kopf- und Fusszeile
+    \pagestyle{fancy}                           % eigener Seitenstil
+    \fancyhf{}                                  % alle Kopf- und Fusszeilenfelder bereinigen
 
-\fancyhead[L]{} %Kopfzeile links
-\fancyhead[C]{} %zentrierte Kopfzeile
-\fancyhead[RO]{\rightmark}
-\fancyhead[LE]{\leftmark}
-%\fancyhead[R]{\includegraphics[scale=0.25]{../fig/hslu_logo2.PNG}}
-\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
-\fancyfoot[L]{}
-\fancyfoot[C]{}
-\fancyfoot[RO]{\thepage}
-\fancyfoot[LE]{\thepage}
-\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+    % Kopf- und Fusszeile für Artikel
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{article}{
+        \fancyhead[L]{}                             % Kopfzeile links
+        \fancyhead[C]{}                             % zentrierte Kopfzeile
+        \fancyhead[R]{}                             % Kopfzeile rechts
+        %
+        \fancyfoot[L]{}                             % Fusszeile links
+        \fancyfoot[C]{}                             % Fusszeile zentriert
+        \fancyfoot[R]{\thepage}                     % Fusszeile rechts
+        %
+        \renewcommand{\headrulewidth}{0.4pt}        % obere Trennlinie
+        \renewcommand{\footrulewidth}{0.4pt}        % untere Trennlinie
+    }{}
+    \makeatother        % @ wieder anderes Zeichen
+
+    % Kopf- und Fusszeile für Bücher
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{book}{
+        \fancyhead[LO]{}                            % Kopfzeile links auf ungeraden Seiten
+        \fancyhead[CO]{}                            % Kopfzeile zentriert auf ungeraden Seiten
+        \fancyhead[RO]{\rightmark}                  % Kopfzeile rechts auf ungeraden Seiten
+        \fancyhead[LE]{\leftmark}                   % Kopfzeile links auf geraden Seiten
+        \fancyhead[CE]{}                            % Kopfzeile zentriert auf geraden Seiten
+        \fancyhead[RE]{}                            % Kopfzeile rechts auf geraden Seiten
+        %
+        \fancyfoot[LO]{}                            % Fusszeile links auf ungeraden Seiten
+        \fancyfoot[CO]{}                            % Fusszeile zentriert auf ungeraden Seiten
+        \fancyfoot[RO]{\thepage}                    % Fusszeile rechts auf ungeraden Seiten
+        \fancyfoot[LE]{\thepage}                    % Fusszeile links auf geraden Seiten
+        \fancyfoot[CE]{}                            % Fusszeile zentriert auf geraden Seiten
+        \fancyfoot[RE]{}                            % Fusszeile rechts auf geraden Seiten
+        %
+        \renewcommand{\headrulewidth}{0.4pt}        % obere Trennlinie
+        \renewcommand{\footrulewidth}{0.4pt}        % untere Trennlinie
+    }{}
+    \makeatother        % @ wieder anderes Zeichen
+
+    %\fancyhead[R]{\includegraphics[scale=0.25]{../fig/hslu_logo2.PNG}}
+
