@@ -9,28 +9,10 @@
 % Anpassungen für die Deutsche
     \usepackage[ngerman]{babel} % Neue deutsche Rechtschreibung
 
-% Tabellen
-    \usepackage{longtable}  % Seitenübergreifende Tabellen
-    \usepackage{multirow}   % Zeilen zusammenfassen
-
-% Grafiken
-    \usepackage{graphicx}   % Grafiken einbinden
-    \usepackage{pdfpages}   % PDF Seiten einbinden
-    \usepackage{caption}    % Bildunterschrift
-    \usepackage{subcaption} % Bildunterschrift unter zusammen dargestellten Bildern
-    \usepackage{tikz}       % TikZ - "TikZ ist kein Zeichenprogramm"
-
-% Mathematik
-    \usepackage{amsmath}    % Strukturierung von Formeln
-    \usepackage{amssymb}    % Sonderzeichen für Formeln
-
-% Verweise
-    \usepackage{makeidx}    % Index
-    \usepackage{hyperref}   % Verlinkte interne und externe Verweise
-
 % Farben
-    \usepackage{color}      % Farben
-    \usepackage{colortbl}   % Tabellen einfärben
+    \usepackage{color}          % Farben
+    \usepackage{colortbl}       % Tabellen einfärben
+    \usepackage[table]{xcolor}  % 
 
 % Eigene definierte Farben
     \definecolor{gray}      {gray}  {0.749}
@@ -39,6 +21,30 @@
     \definecolor{green}     {rgb}   {0 ,  1  , 0}
     \definecolor{blue}      {rgb}   {0 ,  0  , 1}
     \definecolor{darkgreen} {rgb}   {0 , 0.6 , 0}
+
+% Tabellen
+    \usepackage{longtable}      % Seitenübergreifende Tabellen
+    \usepackage{multirow}       % Zeilen zusammenfassen
+
+% Eigene Tabellen
+    % Hellgrau und weiss abwechselnd
+    \newenvironment{zebratabular}{\rowcolors{2}{lgray}{white}\tabular}{\endtabular}
+    \newenvironment{zebralongtable}{\rowcolors{2}{lgray}{white}\longtable}{\endlongtable}
+
+% Grafiken
+    \usepackage{graphicx}       % Grafiken einbinden
+    \usepackage{pdfpages}       % PDF Seiten einbinden
+    \usepackage{caption}        % Bildunterschrift
+    \usepackage{subcaption}     % Bildunterschrift unter zusammen dargestellten Bildern
+    \usepackage{tikz}           % TikZ - "TikZ ist kein Zeichenprogramm"
+
+% Mathematik
+    \usepackage{amsmath}        % Strukturierung von Formeln
+    \usepackage{amssymb}        % Sonderzeichen für Formeln
+
+% Verweise
+    \usepackage{makeidx}        % Index
+    \usepackage{hyperref}       % Verlinkte interne und externe Verweise
 
 % Source-Code Paket
     \usepackage{listings}
