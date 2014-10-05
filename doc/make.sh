@@ -12,6 +12,9 @@ do
     cd $homedir/charta
     pdflatex charta.tex
 
+    cd $homedir/example
+    pdflatex example.tex
+
     cd $homedir/matrix
     pdflatex matrix.tex
 
