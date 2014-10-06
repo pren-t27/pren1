@@ -1,0 +1,159 @@
+\section{Technologierecherche Informatik}
+Um eine umfangreiche Recherche im Bereich Informatik sicherzustellen, wurde 
+sie in vier Bereiche gegliedert: Positionserkennung des Korbes, 
+Schnittstellen, Bilderkennung / –verarbeitung und Positionsberechnung. Im 
+Bereich Positionserkennung des Korbes wurden verschiedene Kameratechnologien 
+angeschaut. Im Bereich Schnittstellen wurden heute gängige Standards zur 
+Datenübertragung angeschaut. In der Bilderkennung / –verarbeitung wurden 
+bestehende Technologien gesucht, die zur Bilderkennung / -verarbeitung 
+verwendet werden können. Das Thema Positionsberechnung setzt sich damit 
+auseinander, wie die Position des Fahr- bzw. Flugzeugs auf dem Spielfeld 
+erkannt werden kann. Nachfolgend sind diese Links in Tabellenform ersichtlich:
+
+\subsection{Positionserkennung Korb HW}
+
+\subsubsection{Raspberry Pi – Kamera Module}
+\url{http://www.raspberrypi.org/camera} \\
+\begin{itemize}
+    \item Ab 35.- erhältlich
+    \item Direkter Anschluss an RaspberryPi
+    \item 2592 x 1944 Pixel Auflösung.
+\end{itemize}
+
+\subsubsection{Herkömmliche Webcam}
+\url{http://www.toppreise.ch/prod_181564.html}
+\begin{itemize}
+    \item Ab 13.- erhältlich
+    \item Leistungsstärkere Modelle verfügbar
+    \item zB. Microsoft LifeCam VX 800 640 x 480 px
+\end{itemize}
+
+\subsubsection{Smartphonekamera}
+\url{http://de.wikipedia.org/wiki/Smartphone}
+\begin{itemize}
+    \item ältere Smartphones billig verfügbar
+    \item gute Kamera, inkl. Prozessoren und Memory
+    \item viele API’s
+    \item integriertes WLAN und Webservices
+\end{itemize}
+
+\subsection{Schnittstellen}
+
+\subsubsection{USB}
+\url{http://de.wikipedia.org/wiki/Raspberry_Pi}
+\begin{itemize}
+    \item Microcontroller bieten meist eine USB- oder Mikro-USB-Schnittstelle
+    \item Smartphones sind meist über eine Mikro-USB-Schnittstelle verfügbar
+\end{itemize}
+
+\subsubsection{Bluetooth}
+\url{http://www.raspberrypi.org/forums/viewtopic.php?f=45&t=27678}
+\begin{itemize}
+    \item Smartphones sind meist Bluetooth fähig
+    \item Microcontroller können mit einem zusätzlichen Bluetooth-Sender erweitert werden
+    \item RaspberryPi verfügt über einen Bluetooth-Dongle
+    \item Es sind keine Kabel oder statische Verbindungen notwendig
+\end{itemize}
+
+\subsubsection{GigaInfrarot}
+\url{http://computer-oiger.de/2012/10/28/drahtlos-mit-tempo-3-gigabit-dresdner-forscher-entwickeln-neue-optik-schnittstelle/17936}
+\begin{itemize}
+    \item Neue Technologie
+    \item schnellen Datenübertragung
+    \item Jedoch nur auf kurzer Distanz möglich.
+\end{itemize}
+
+\subsubsection{Infrarot}
+\url{http://www.itwissen.info/uebersicht/lexikon/Infrarot-LANs.html?page=0}
+\begin{itemize}
+    \item Unterschiedliche Protokolle
+    \item flexibler
+\end{itemize}
+
+\subsubsection{WifiDirect}
+\url{http://www.wi-fi.org/discover-wi-fi/wi-fi-direct}
+\begin{itemize}
+    \item Punkt-zu-Punkt-Verbindung
+    \item Website mit Beschreibung
+\end{itemize}
+
+\subsection{Bilderkennung und Verarbeitung}
+
+\subsubsection{Bildverarbeitung}
+\url{http://www.kreissl.info/bilderkennung.php}
+\begin{itemize}
+    \item Allgemeines Vorgehen bei der Bildverarbeitung. 
+    \begin{itemize}
+        \item Vorgehen
+        \item Segmentierung
+        \item Verarbeitung
+    \end{itemize}
+    \item Zusätzliche Infos anhand von einem Beispielbild.
+\end{itemize}
+
+\subsubsection{OpenCV}
+\url{http://opencv.org/ }
+\begin{itemize}
+    \item Enormer funktionsumfang
+    \item Grosse Community
+    \item Alle gängigen Plattformer werden unterstützt
+    \item Plugins für IDE’s oder compability-packs verfügbar
+\end{itemize}
+
+\subsubsection{LabView}
+\url{http://www.ni.com/trylabview/d/?metc=mtnpee&gclid=CIn79ZGL67kCFUlZ3godWzYAgQ}
+\begin{itemize}
+    \item Speziell für Bildbearbeitung
+    \item Grosse Treiberbibliotheken
+    \item Grosse Community
+    \item Nur Windows
+\end{itemize}
+
+\subsubsection{Matlab}
+\url{http://www.mathworks.ch/products/matlab/}
+\begin{itemize}
+    \item Windows, Linux und Mac
+    \item Java, C, C++ oder .NET
+    \item Evtl. keine Kameraunterstützung
+\end{itemize}
+
+\subsection{Positionsberechnung}
+
+\subsubsection{Mikrokontroller}
+\url{http://de.wikipedia.org/wiki/Raspberry_Pi}
+\begin{itemize}
+    \item Direkte Berechnung auf Microcontroller, deshalb keine Übertragung notwendig
+    \item Hohe Frequenzen führen eventuell zu Überlastung vom Microcontroller
+    \item Hat andere Aufgaben (Motorensteuerung)
+\end{itemize}
+
+\subsubsection{Smartphones}
+\url{http://de.wikipedia.org/wiki/Smartphone}
+\begin{itemize}
+    \item Wenn Bild auf Smartphone, gleich auch Bildauswertung
+    \item Kompatibilität mit der Bildverarbeitungs-Software muss gegeben sein
+    \item Kompatibilität mit dem Microcontroller
+\end{itemize}
+
+\subsubsection{Tablet / PC}
+\url{http://de.wikipedia.org/wiki/Notebook}
+\begin{itemize}
+    \item Grosse Leistung
+    \item Übertragung notwendig
+    \item Internetnutzung möglich
+    \item Eventuell Bildverarbeitung auf einem externen Server
+\end{itemize}
+
+\subsubsection{Geometrischer Schwerpunkt}
+\url{http://www.gerdlamprecht.de/GeometrischerSchwerpunkt.htm}
+\begin{itemize}
+    \item Einfach umsetzbar
+    \item Einfach berechenbar
+    \item Evtl. auf Microcontroller
+\end{itemize}
+
+\subsubsection{Entfernungsmessung}
+\url{http://de.wikipedia.org/wiki/Entfernungsmessung}
+\begin{itemize}
+    \item Unterschiedliche Messtechniken (siehe Link)
+\end{itemize}
