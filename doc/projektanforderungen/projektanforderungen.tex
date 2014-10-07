@@ -14,6 +14,7 @@
 
 \newcommand{\tabheader}     % Tabellenkopf
 {
+    \begin{zebratabular}[l]{@{}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}p{0.1\textwidth}@{}}
     \rowcolor{gray}
     Anforderung &
         Pflicht &
@@ -21,10 +22,10 @@
         Verantw. \\
 }
 
+\begin{landscape}
 \section{Projektanforderungen}
 %
 \subsection{Gerät}
-\begin{zebratabular}[l]{@{}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}p{0.1\textwidth}@{}}
     \tabheader
     Abmessungen & 
         $\leq$ 50 cm x 50 cm x 100 cm &
@@ -61,7 +62,6 @@
 \end{zebratabular}
 
 \subsection{Randbedingungen}
-\begin{zebratabular}[l]{@{}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}p{0.1\textwidth}@{}}
     \tabheader
     Abmessungen Spielfeld &
         $\geq$ 148 cm x 58 cm &
@@ -120,7 +120,6 @@
 \subsection{Umgebungskriterien}
 
 \subsection{Projektziel}
-\begin{zebratabular}[l]{@{}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}p{0.1\textwidth}@{}}
     \tabheader
     Ball versenken &
         Mindestens 1 Ball versenken &
@@ -131,4 +130,5 @@
         &
         I \\
 \end{zebratabular}
+\end{landscape}
 \end{document}
