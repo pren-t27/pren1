@@ -12,7 +12,19 @@
 \tableofcontents
 \clearpage
 
+\newcommand{\tabheader}     % Tabellenkopf
+{
+    \begin{zebratabular}[l]{@{}p{0.2\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
+    \rowcolor{gray}
+    Stichwort &
+        Quelle &
+        Beschreibung &
+        Bew. \\
+}
+
 \input{abstract}
+
+\input{quellen}
 
 \input{tr_m}
 
