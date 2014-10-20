@@ -25,7 +25,10 @@ do
     pdflatex projektanforderungen.tex
 
     cd $homedir/protocol
-    pdflatex protocol_01.tex
+    for j in *.tex
+    do
+        pdflatex $j
+    done
 
     cd $homedir/team
     pdflatex team.tex
