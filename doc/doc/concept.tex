@@ -2,9 +2,25 @@
 
 \subsection{Berechnungen Spielfeld}
 
-\[\alpha = \arctan \frac{600mm}{1900mm} = 17.52^\circ \]
+Angenommen das Gerät wird im Startfeld mittig an der Startlinie positioniert, und ausschliesslich mit einer drehbahren Abschussvorrichtung ausgerüstet, und der Korb wird ganz am Rand des Feldes positioniert, ergibt sich für die maximale Wurflänge lmax folgender Wert: 
+ 
+\[\alpha = \arctan( \frac{600mm}{1900mm}) = 17.52^\circ \]
+\[\ l_\text{max} = \frac{1900mm}{\cos( 17.52^\circ)} = 1992mm \]
 
+Somit ergibt sich im schlimmsten Fall ein Längenunterschied von 9.2 cm. Je nachdem wie hoch die Wurfgenauigkeit ist, könnte man die 9.2cm in Anbetracht des Korbdurchmessers von 30cm fast vernachlässigen, und ein Drehturm mit immer gleicher Wurflänge konstruieren.
 
 \subsection{Berechnungen Ballwurf}
 
+Angenommen der Ball wird auf gleicher Höhe wie der Korb abgeworfen, kann mit folgender Formel berechnet werden, wie schnell der Ball geworfen werden muss, falls er in einem Winkel von 65º geworfen wird:
+
 \[ V_0 = \sqrt{ \frac{S_x}{\sin(2\alpha)} \cdot g } = \sqrt{ \frac{1.9m}{\sin(2 \cdot 65^\circ)} \cdot 9.81 \frac{m}{s^2}} = 4.93 \frac{m}{s} \]
+
+Die maximale Höhe von 1.8 Metern darf nicht überschritten werden. hmax lässt sich folgendermassen berechnen:
+
+\[ h_\text{max} = \frac{V_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} = \frac{4.93 \frac{m}{s}^2 \cdot \sin(65^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} = 1.018m \]
+
+Die gleiche Rechnung mit einem Winkel von 70º:
+
+\[ V_0 = \sqrt{ \frac{S_x}{\sin(2\alpha)} \cdot g } = \sqrt{ \frac{1.9m}{\sin(2 \cdot 70^\circ)} \cdot 9.81 \frac{m}{s^2}} = 5.385 \frac{m}{s} \]
+
+\[ h_\text{max} = \frac{V_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} = \frac{5.385 \frac{m}{s}^2 \cdot \sin(70^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} = 1.305m \]
