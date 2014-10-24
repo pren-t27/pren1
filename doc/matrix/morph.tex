@@ -2,81 +2,60 @@
 \footnotesize
 \pagestyle{empty}
 
+\newcommand{\morphcellwidth}
+{
+0.12\linewidth
+}
+
 % Morphologischer Kasten mit Stichworten
 \begin{table}
-    \begin{zebratabular}{@{}p{0.12\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}p{0.08\linewidth}}
+    %\begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
+    \begin{zebratabular}{@{}p{0.2\linewidth}llllll}
         \rowcolor{gray}
         Eigenschaften &
-            \multicolumn{9}{c}{Merkmalausprägung} \\
+            \multicolumn{6}{c}{Merkmalausprägung} \\
+        Art der Bewegung &
+            Fliegend                \tikzmark{move:fly}          &
+            Fahrend                 \tikzmark{move:drive}        &
+            Stehend                 \tikzmark{move:stay}         &
+                                    \tikzmark{move:none3}        &
+                                    \tikzmark{move:none2}        &
+                                    \tikzmark{move:none1}        \\
         Ballbeförderung &
-            Katapult                    \tikzmark{ballmove:katapult} &
-            Ballwurfmaschine (2 Rollen) \tikzmark{ballmove:wheel}    &
-            Ballwurfmaschine (1 Rolle)  \tikzmark{ballmove:wheels}   &
-            Rakete                      \tikzmark{ballmove:rocket}   &
-            Steinschleuder              \tikzmark{ballmove:sling}    &
-            Kanone (Feder)              \tikzmark{ballmove:canon}    &
-            Druckluft                   \tikzmark{ballmove:pressure} &
-            Tennisschläger              \tikzmark{ballmove:racket}   &
-            Abwerfen (Fliegen)          \tikzmark{ballmove:drop}     \\
-        Ausrichtung / Fahren / Fliegen &
-            Raupe                       \tikzmark{move:crawler}      &
-            Räder                       \tikzmark{move:tires}        &
-            Laufen                      \tikzmark{move:walk}         &
-            Drehturm (Standmodell)      \tikzmark{move:tower}        &
-            Hovercraft                  \tikzmark{move:hover}        &
-            Helikopter                  \tikzmark{move:heli}         &
-            Zepelin                     \tikzmark{move:zepelin}      &
-                                        \tikzmark{move:none2}        &
-                                        \tikzmark{move:none1}        \\
+            Ballistisch             \tikzmark{ballmove:ball}     &
+            Abwurf                  \tikzmark{ballmove:drop}     &
+                                    \tikzmark{ballmove:none4}    &
+                                    \tikzmark{ballmove:none3}    &
+                                    \tikzmark{ballmove:none2}    &
+                                    \tikzmark{ballmove:none1}    \\
         Erkennen des Korbes &
-            Ultraschall                 \tikzmark{localize:us}       &
-            Laser                       \tikzmark{localize:laser}    &
-            Kamera                      \tikzmark{localize:camera}   &
-            Radar                       \tikzmark{localize:radar}    &
-                                        \tikzmark{localize:none4}    &
-                                        \tikzmark{localize:none3}    &
-                                        \tikzmark{localize:none2}    &
-                                        \tikzmark{localize:none1}    \\
+            Distanzmessung          \tikzmark{localize:dist}     &
+            Optische Erkennung      \tikzmark{localize:opt}      &
+                                    \tikzmark{localize:none4}    &
+                                    \tikzmark{localize:none3}    &
+                                    \tikzmark{localize:none2}    &
+                                    \tikzmark{localize:none1}    \\
         Ballager &
-            Sack                        \tikzmark{store:bag}         &
-            Eierschachtel               \tikzmark{store:carton}      &
-            Rohrmagazin                 \tikzmark{store:pipe}        &
-            Rampe, Rutschbahn           \tikzmark{store:ramp}        &
-            Trommelmagazin              \tikzmark{store:revolver}    &
-            Kapsel                      \tikzmark{store:capsule}     &
-            Trichter                    \tikzmark{store:cone}        &
-            Kiste                       \tikzmark{store:box}         &
-                                        \tikzmark{store:none1}       \\
+            Einzeln                 \tikzmark{store:single}      &
+            Zusammen                \tikzmark{store:mult}        &
+                                    \tikzmark{store:none4}       &
+                                    \tikzmark{store:none4}       &
+                                    \tikzmark{store:none4}       &
+                                    \tikzmark{store:none1}       \\
         Übertragung Startsignal &
-            Funk                        \tikzmark{connect:radio}     &
-            Infrarot                    \tikzmark{connect:ir}        &
-            Ultraschall                 \tikzmark{connect:us}        &
-            USB                         \tikzmark{connect:usb}       &
-            RS232                       \tikzmark{connect:serial}    &
-            Spracherkennung             \tikzmark{connect:voice}     &
-            Bluetooth                   \tikzmark{connect:bt}        &
-                                        \tikzmark{connect:none2}     &
-                                        \tikzmark{connect:none1}     \\
-        Endsignal &
-            Explosion                   \tikzmark{signal:explosion}  &
-            Feuerwerk                   \tikzmark{signal:firework}   &
-            Konfetti                    \tikzmark{signal:confetti}   &
-            Tonsignal                   \tikzmark{signal:sound}      &
-            Lichtsignal                 \tikzmark{signal:light}      &
-            Flugmanöver                 \tikzmark{signal:maneuver}   &
-            Rauchzeichen                \tikzmark{signal:smoke}      &
-            Bannerschlepp               \tikzmark{signal:banner}     &
-                                        \tikzmark{signal:none1}      \\
+            Funk                    \tikzmark{connect:radio}     &
+            Optisch                 \tikzmark{connect:opt}       &
+            Ultraschall             \tikzmark{connect:us}        &
+            Spracherkennung         \tikzmark{connect:voice}     &
+                                    \tikzmark{connect:none2}     &
+                                    \tikzmark{connect:none1}     \\
         Energieversorgung &
-            Akku                        \tikzmark{power:accu}        &
-            Netzgerät                   \tikzmark{power:supply}      &
-            Verbrennungsmotor           \tikzmark{power:combustion}  &
-            Druckluft                   \tikzmark{power:pressure}    &
-            Solar                       \tikzmark{power:solar}       &
-            Potenzielle Energie         \tikzmark{power:height}      &
-            Feder                       \tikzmark{power:spring}      &
-            Schwungrad                  \tikzmark{power:flywheel}    &
-                                        \tikzmark{power:none1}       \\
+            intern elektrisch       \tikzmark{power:elint}       &
+            extern elektrisch       \tikzmark{power:elext}       &
+            Verbrennungsmotor       \tikzmark{power:combustion}  &
+            Druckluft               \tikzmark{power:air}         &
+            Potenzielle Energie     \tikzmark{power:height}      &
+            Feder                   \tikzmark{power:spring}      \\
     \end{zebratabular}
 \end{table}
 
@@ -86,22 +65,46 @@
         %                         Farbeinstellung:
         %                                 V
     \draw [ultra thick, rounded corners, red] 
+        ({pic cs:move:fly}) circle(2pt)
+        --
         ({pic cs:ballmove:drop}) circle(2pt)
         --
-        ({pic cs:move:heli}) circle(2pt)
+        ({pic cs:localize:opt}) circle(2pt)
         --
-        ({pic cs:localize:camera}) circle(2pt)
+        ({pic cs:store:mult}) circle(2pt)
         --
-        ({pic cs:store:bag}) circle(2pt)
+        ({pic cs:connect:radio}) circle(2pt)
         --
-        ({pic cs:connect:bt}) circle(2pt)
-        --
-        ({pic cs:signal:light}) circle(2pt)
-        --
-        ({pic cs:power:accu}) circle(2pt)
+        ({pic cs:power:elint}) circle(2pt)
         ;
         % Ende Quadrokopterbeispiel
     % Hier kommt die nächste Lösungsvariante: 
+    \draw [ultra thick, rounded corners, blue] 
+        ({pic cs:move:drive}) circle(2pt)
+        --
+        ({pic cs:ballmove:ball}) circle(2pt)
+        --
+        ({pic cs:localize:dist}) circle(2pt)
+        --
+        ({pic cs:store:single}) circle(2pt)
+        --
+        ({pic cs:connect:opt}) circle(2pt)
+        --
+        ({pic cs:power:elint}) circle(2pt)
+        ;
+    \draw [ultra thick, rounded corners, green] 
+        ({pic cs:move:stay}) circle(2pt)
+        --
+        ({pic cs:ballmove:ball}) circle(2pt)
+        --
+        ({pic cs:localize:dist}) circle(2pt)
+        --
+        ({pic cs:store:mult}) circle(2pt)
+        --
+        ({pic cs:connect:radio}) circle(2pt)
+        --
+        ({pic cs:power:air}) circle(2pt)
+        ;
 \end{tikzpicture}
 
 \normalsize
