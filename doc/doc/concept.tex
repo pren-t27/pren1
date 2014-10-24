@@ -2,7 +2,7 @@
 
 \subsection{Berechnungen Spielfeld}
 
-Angenommen das Gerät wird im Startfeld mittig an der Startlinie positioniert, und ausschliesslich mit einer drehbahren Abschussvorrichtung ausgerüstet, und der Korb wird ganz am Rand des Feldes positioniert, ergibt sich für die maximale Wurflänge lmax folgender Wert: 
+Angenommen das Gerät wird im Startfeld mittig an der Startlinie positioniert, und ausschliesslich mit einer drehbaren Abschussvorrichtung ausgerüstet, und der Korb wird ganz am Rand des Feldes positioniert, ergibt sich für die maximale Wurflänge lmax folgender Wert: 
  
 \[\alpha = \arctan( \frac{600mm}{1900mm}) = 17.52^\circ \]
 \[\ l_\text{max} = \frac{1900mm}{\cos( 17.52^\circ)} = 1992mm \]
@@ -11,16 +11,40 @@ Somit ergibt sich im schlimmsten Fall ein Längenunterschied von 9.2 cm. Je nach
 
 \subsection{Berechnungen Ballwurf}
 
-Angenommen der Ball wird auf gleicher Höhe wie der Korb abgeworfen, kann mit folgender Formel berechnet werden, wie schnell der Ball geworfen werden muss, falls er in einem Winkel von 65º geworfen wird:
+Angenommen der Ball wird auf der Höhe des Korbes abgeworfen, kann mit folgender Formel berechnet werden, mit welcher Geschwindigkeit der Ball geworfen werden muss, falls er in einem Winkel von 65º geworfen wird:
 
-\[ V_0 = \sqrt{ \frac{S_x}{\sin(2\alpha)} \cdot g } = \sqrt{ \frac{1.9m}{\sin(2 \cdot 65^\circ)} \cdot 9.81 \frac{m}{s^2}} = 4.93 \frac{m}{s} \]
+\[ v_0 = \sqrt{ \frac{s_x}{\sin(2\alpha)} \cdot g } = \sqrt{ \frac{1.9m}{\sin(2 \cdot 65^\circ)} \cdot 9.81 \frac{m}{s^2}} = 4.93 \frac{m}{s} \]
 
-Die maximale Höhe von 1.8 Metern darf nicht überschritten werden. hmax lässt sich folgendermassen berechnen:
+Die maximale Höhe von 1.8 Metern darf nicht überschritten werden. Die Höhe die der Ball erreicht lässt sich folgendermassen berechnen:
 
-\[ h_\text{max} = \frac{V_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} = \frac{4.93 \frac{m}{s}^2 \cdot \sin(65^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} = 1.018m \]
+\[ h_\text{max} = \frac{v_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} = \frac{4.93 \frac{m}{s}^2 \cdot \sin(65^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} = 1.018m \]
 
-Die gleiche Rechnung mit einem Winkel von 70º:
+Die Zeit, die der Ball braucht bis er im Korb ist, lässt sich folgendermassen berechnen:
 
-\[ V_0 = \sqrt{ \frac{S_x}{\sin(2\alpha)} \cdot g } = \sqrt{ \frac{1.9m}{\sin(2 \cdot 70^\circ)} \cdot 9.81 \frac{m}{s^2}} = 5.385 \frac{m}{s} \]
+\[ t = \frac{s_x}{v_0 \cdot \cos(\alpha)} = \frac{1.9m}{4.93 \frac{m}{s} \cdot \cos(65^\circ)} = 0.911s \]
 
-\[ h_\text{max} = \frac{V_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} = \frac{5.385 \frac{m}{s}^2 \cdot \sin(70^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} = 1.305m \]
+Nun werden die gleichen Rechnungen mit einem Winkel von 70º durchgeführt:
+
+\[ v_0 = \sqrt{ \frac{s_x}{\sin(2\alpha)} \cdot g } = \sqrt{ \frac{1.9m}{\sin(2 \cdot 70^\circ)} \cdot 9.81 \frac{m}{s^2}} = 5.385 \frac{m}{s} \]
+
+\[ h_\text{max} = \frac{v_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} = \frac{5.385 \frac{m}{s}^2 \cdot \sin(70^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} = 1.305m \]
+
+\[ t = \frac{s_x}{v_0 \cdot \cos(\alpha)} = \frac{1.9m}{5.385 \frac{m}{s} \cdot \cos(70^\circ)} = 1.032s \]
+
+Geht man nun beispielsweise davon aus, dass die Abschussgenauigkeit ± 0.3 m/s beträgt, kann berechnet werden, mit welchem Winkel die Distanz mehr variiert:
+
+Winkel 65º:
+
+\[ s_x = \frac{(v_0 \pm \Delta v)^2 \cdot \sin(2 \cdot \alpha)}{g} = \frac{(4.93 \frac{m}{s} \pm 0.3 \frac{m}{s})^2 \cdot \sin(2 \cdot 65^\circ)}{9.81 \frac{m}{s^2}} \]
+
+\[ s_\text{xmax} = 2.136m \hspace{30mm} s_\text{xmin} = 1.674m \]
+
+Winkel 70º:
+
+\[ s_x = \frac{(v_0 \pm \Delta v)^2 \cdot \sin(2 \cdot \alpha)}{g} = \frac{(5.385 \frac{m}{s} \pm 0.3 \frac{m}{s})^2 \cdot \sin(2 \cdot 70^\circ)}{9.81 \frac{m}{s^2}} \]
+
+\[ s_\text{xmax} = 2.118m \hspace{30mm} s_\text{xmin} = 1.694m \]
+
+Bei einer Abschussgeschwindigkeitsänderung von lediglich ± 0.3 m/s ergibt sich bereits eine Abweichung der Wurfweite von ± 20-25cm. Die Geschwindigkeit muss somit ziemlich genau eingestellt werden können und sehr konstant sein.
+
+Auch kann man nun sagen, dass die Längenänderung mit grösser werdendem Winkel kleiner wird. Somit wäre es besser, den Ball in einem grösseren Winkel zu werfen. Allerdings muss dann der Ball schneller geschossen werden (mehr Energieaufwand, grösserer Rückstoss), der Weg wird länger uns der Flug dauert länger.
