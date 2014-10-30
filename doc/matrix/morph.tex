@@ -1,5 +1,4 @@
 \begin{landscape}
-\footnotesize
 \pagestyle{empty}
 
 \newcommand{\morphcellwidth}
@@ -8,105 +7,220 @@
 }
 
 % Morphologischer Kasten mit Stichworten
-\begin{table}
+\footnotesize
+\begin{table}[h!]
     %\begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
     \begin{zebratabular}{@{}p{0.2\linewidth}llllll}
         \rowcolor{gray}
         Eigenschaften &
             \multicolumn{6}{c}{Merkmalausprägung} \\
         Art der Bewegung &
-            Fliegend                \tikzmark{move:fly}          &
-            Fahrend                 \tikzmark{move:drive}        &
-            Stehend                 \tikzmark{move:stay}         &
-                                    \tikzmark{move:none3}        &
-                                    \tikzmark{move:none2}        &
-                                    \tikzmark{move:none1}        \\
+            Fliegend                \tikzmark{1move:fly}          &
+            Fahrend                 \tikzmark{1move:drive}        &
+            Stehend                 \tikzmark{1move:stay}         &
+                                    \tikzmark{1move:none3}        &
+                                    \tikzmark{1move:none2}        &
+                                    \tikzmark{1move:none1}        \\
         Ballbeförderung &
-            Ballistisch             \tikzmark{ballmove:ball}     &
-            Abwurf                  \tikzmark{ballmove:drop}     &
-                                    \tikzmark{ballmove:none4}    &
-                                    \tikzmark{ballmove:none3}    &
-                                    \tikzmark{ballmove:none2}    &
-                                    \tikzmark{ballmove:none1}    \\
+            Ballistisch             \tikzmark{1ballmove:ball}     &
+            Abwurf                  \tikzmark{1ballmove:drop}     &
+                                    \tikzmark{1ballmove:none4}    &
+                                    \tikzmark{1ballmove:none3}    &
+                                    \tikzmark{1ballmove:none2}    &
+                                    \tikzmark{1ballmove:none1}    \\
         Erkennen des Korbes &
-            Distanzmessung          \tikzmark{localize:dist}     &
-            Optische Erkennung      \tikzmark{localize:opt}      &
-                                    \tikzmark{localize:none4}    &
-                                    \tikzmark{localize:none3}    &
-                                    \tikzmark{localize:none2}    &
-                                    \tikzmark{localize:none1}    \\
+            Distanzmessung          \tikzmark{1localize:dist}     &
+            Optische Erkennung      \tikzmark{1localize:opt}      &
+                                    \tikzmark{1localize:none4}    &
+                                    \tikzmark{1localize:none3}    &
+                                    \tikzmark{1localize:none2}    &
+                                    \tikzmark{1localize:none1}    \\
         Ballager &
-            Einzeln                 \tikzmark{store:single}      &
-            Zusammen                \tikzmark{store:mult}        &
-                                    \tikzmark{store:none4}       &
-                                    \tikzmark{store:none4}       &
-                                    \tikzmark{store:none4}       &
-                                    \tikzmark{store:none1}       \\
+            Einzeln                 \tikzmark{1store:single}      &
+            Zusammen                \tikzmark{1store:mult}        &
+                                    \tikzmark{1store:none4}       &
+                                    \tikzmark{1store:none4}       &
+                                    \tikzmark{1store:none4}       &
+                                    \tikzmark{1store:none1}       \\
         Übertragung Startsignal &
-            Funk                    \tikzmark{connect:radio}     &
-            Optisch                 \tikzmark{connect:opt}       &
-            Ultraschall             \tikzmark{connect:us}        &
-            Spracherkennung         \tikzmark{connect:voice}     &
-                                    \tikzmark{connect:none2}     &
-                                    \tikzmark{connect:none1}     \\
+            Funk                    \tikzmark{1connect:radio}     &
+            Optisch                 \tikzmark{1connect:opt}       &
+            Ultraschall             \tikzmark{1connect:us}        &
+            Spracherkennung         \tikzmark{1connect:voice}     &
+                                    \tikzmark{1connect:none2}     &
+                                    \tikzmark{1connect:none1}     \\
         Energieversorgung &
-            intern elektrisch       \tikzmark{power:elint}       &
-            extern elektrisch       \tikzmark{power:elext}       &
-            Verbrennungsmotor       \tikzmark{power:combustion}  &
-            Druckluft               \tikzmark{power:air}         &
-            Potenzielle Energie     \tikzmark{power:height}      &
-            Feder                   \tikzmark{power:spring}      \\
+            intern elektrisch       \tikzmark{1power:elint}       &
+            extern elektrisch       \tikzmark{1power:elext}       &
+            Verbrennungsmotor       \tikzmark{1power:combustion}  &
+            Druckluft               \tikzmark{1power:air}         &
+            Potenzielle Energie     \tikzmark{1power:height}      &
+            Feder                   \tikzmark{1power:spring}      \\
     \end{zebratabular}
 \end{table}
 
 % Linien zur Darstellung von Lösungsvarianten
 \begin{tikzpicture}[remember picture,overlay]
-    % Quadrokoptervariante als Beispiel
-        %                         Farbeinstellung:
-        %                                 V
     \draw [ultra thick, rounded corners, red] 
-        ({pic cs:move:fly}) circle(2pt)
+        ({pic cs:1move:fly}) circle(2pt)
         --
-        ({pic cs:ballmove:drop}) circle(2pt)
+        ({pic cs:1ballmove:drop}) circle(2pt)
         --
-        ({pic cs:localize:opt}) circle(2pt)
+        ({pic cs:1localize:opt}) circle(2pt)
         --
-        ({pic cs:store:mult}) circle(2pt)
+        ({pic cs:1store:mult}) circle(2pt)
         --
-        ({pic cs:connect:radio}) circle(2pt)
+        ({pic cs:1connect:radio}) circle(2pt)
         --
-        ({pic cs:power:elint}) circle(2pt)
-        ;
-        % Ende Quadrokopterbeispiel
-    % Hier kommt die nächste Lösungsvariante: 
-    \draw [ultra thick, rounded corners, blue] 
-        ({pic cs:move:drive}) circle(2pt)
-        --
-        ({pic cs:ballmove:ball}) circle(2pt)
-        --
-        ({pic cs:localize:dist}) circle(2pt)
-        --
-        ({pic cs:store:single}) circle(2pt)
-        --
-        ({pic cs:connect:opt}) circle(2pt)
-        --
-        ({pic cs:power:elint}) circle(2pt)
-        ;
-    \draw [ultra thick, rounded corners, green] 
-        ({pic cs:move:stay}) circle(2pt)
-        --
-        ({pic cs:ballmove:ball}) circle(2pt)
-        --
-        ({pic cs:localize:dist}) circle(2pt)
-        --
-        ({pic cs:store:mult}) circle(2pt)
-        --
-        ({pic cs:connect:radio}) circle(2pt)
-        --
-        ({pic cs:power:air}) circle(2pt)
+        ({pic cs:1power:elint}) circle(2pt)
         ;
 \end{tikzpicture}
-
 \normalsize
+
+\clearpage
+% Morphologischer Kasten mit Stichworten
+\footnotesize
+\begin{table}[h!]
+    %\begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
+    \begin{zebratabular}{@{}p{0.2\linewidth}llllll}
+        \rowcolor{gray}
+        Eigenschaften &
+            \multicolumn{6}{c}{Merkmalausprägung} \\
+        Art der Bewegung &
+            Fliegend                \tikzmark{2move:fly}          &
+            Fahrend                 \tikzmark{2move:drive}        &
+            Stehend                 \tikzmark{2move:stay}         &
+                                    \tikzmark{2move:none3}        &
+                                    \tikzmark{2move:none2}        &
+                                    \tikzmark{2move:none1}        \\
+        Ballbeförderung &
+            Ballistisch             \tikzmark{2ballmove:ball}     &
+            Abwurf                  \tikzmark{2ballmove:drop}     &
+                                    \tikzmark{2ballmove:none4}    &
+                                    \tikzmark{2ballmove:none3}    &
+                                    \tikzmark{2ballmove:none2}    &
+                                    \tikzmark{2ballmove:none1}    \\
+        Erkennen des Korbes &
+            Distanzmessung          \tikzmark{2localize:dist}     &
+            Optische Erkennung      \tikzmark{2localize:opt}      &
+                                    \tikzmark{2localize:none4}    &
+                                    \tikzmark{2localize:none3}    &
+                                    \tikzmark{2localize:none2}    &
+                                    \tikzmark{2localize:none1}    \\
+        Ballager &
+            Einzeln                 \tikzmark{2store:single}      &
+            Zusammen                \tikzmark{2store:mult}        &
+                                    \tikzmark{2store:none4}       &
+                                    \tikzmark{2store:none4}       &
+                                    \tikzmark{2store:none4}       &
+                                    \tikzmark{2store:none1}       \\
+        Übertragung Startsignal &
+            Funk                    \tikzmark{2connect:radio}     &
+            Optisch                 \tikzmark{2connect:opt}       &
+            Ultraschall             \tikzmark{2connect:us}        &
+            Spracherkennung         \tikzmark{2connect:voice}     &
+                                    \tikzmark{2connect:none2}     &
+                                    \tikzmark{2connect:none1}     \\
+        Energieversorgung &
+            intern elektrisch       \tikzmark{2power:elint}       &
+            extern elektrisch       \tikzmark{2power:elext}       &
+            Verbrennungsmotor       \tikzmark{2power:combustion}  &
+            Druckluft               \tikzmark{2power:air}         &
+            Potenzielle Energie     \tikzmark{2power:height}      &
+            Feder                   \tikzmark{2power:spring}      \\
+    \end{zebratabular}
+\end{table}
+
+% Linien zur Darstellung von Lösungsvarianten
+\begin{tikzpicture}[remember picture,overlay]
+    \draw [ultra thick, rounded corners, red] 
+        ({pic cs:2move:drive}) circle(2pt)
+        --
+        ({pic cs:2ballmove:ball}) circle(2pt)
+        --
+        ({pic cs:2localize:dist}) circle(2pt)
+        --
+        ({pic cs:2store:single}) circle(2pt)
+        --
+        ({pic cs:2connect:radio}) circle(2pt)
+        --
+        ({pic cs:2power:elint}) circle(2pt)
+        ;
+\end{tikzpicture}
+\normalsize
+
+\clearpage
+% Morphologischer Kasten mit Stichworten
+\footnotesize
+\begin{table}[h!]
+    %\begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
+    \begin{zebratabular}{@{}p{0.2\linewidth}llllll}
+        \rowcolor{gray}
+        Eigenschaften &
+            \multicolumn{6}{c}{Merkmalausprägung} \\
+        Art der Bewegung &
+            Fliegend                \tikzmark{3move:fly}          &
+            Fahrend                 \tikzmark{3move:drive}        &
+            Stehend                 \tikzmark{3move:stay}         &
+                                    \tikzmark{3move:none3}        &
+                                    \tikzmark{3move:none2}        &
+                                    \tikzmark{3move:none1}        \\
+        Ballbeförderung &
+            Ballistisch             \tikzmark{3ballmove:ball}     &
+            Abwurf                  \tikzmark{3ballmove:drop}     &
+                                    \tikzmark{3ballmove:none4}    &
+                                    \tikzmark{3ballmove:none3}    &
+                                    \tikzmark{3ballmove:none2}    &
+                                    \tikzmark{3ballmove:none1}    \\
+        Erkennen des Korbes &
+            Distanzmessung          \tikzmark{3localize:dist}     &
+            Optische Erkennung      \tikzmark{3localize:opt}      &
+                                    \tikzmark{3localize:none4}    &
+                                    \tikzmark{3localize:none3}    &
+                                    \tikzmark{3localize:none2}    &
+                                    \tikzmark{3localize:none1}    \\
+        Ballager &
+            Einzeln                 \tikzmark{3store:single}      &
+            Zusammen                \tikzmark{3store:mult}        &
+                                    \tikzmark{3store:none4}       &
+                                    \tikzmark{3store:none4}       &
+                                    \tikzmark{3store:none4}       &
+                                    \tikzmark{3store:none1}       \\
+        Übertragung Startsignal &
+            Funk                    \tikzmark{3connect:radio}     &
+            Optisch                 \tikzmark{3connect:opt}       &
+            Ultraschall             \tikzmark{3connect:us}        &
+            Spracherkennung         \tikzmark{3connect:voice}     &
+                                    \tikzmark{3connect:none2}     &
+                                    \tikzmark{3connect:none1}     \\
+        Energieversorgung &
+            intern elektrisch       \tikzmark{3power:elint}       &
+            extern elektrisch       \tikzmark{3power:elext}       &
+            Verbrennungsmotor       \tikzmark{3power:combustion}  &
+            Druckluft               \tikzmark{3power:air}         &
+            Potenzielle Energie     \tikzmark{3power:height}      &
+            Feder                   \tikzmark{3power:spring}      \\
+    \end{zebratabular}
+\end{table}
+
+% Linien zur Darstellung von Lösungsvarianten
+\begin{tikzpicture}[remember picture,overlay]
+    \draw [ultra thick, rounded corners, red] 
+        ({pic cs:3move:stay}) circle(2pt)
+        --
+        ({pic cs:3ballmove:ball}) circle(2pt)
+        --
+        ({pic cs:3localize:opt}) circle(2pt)
+        --
+        ({pic cs:3store:single}) circle(2pt)
+        --
+        ({pic cs:3connect:radio}) circle(2pt)
+        --
+        ({pic cs:3power:elint}) circle(2pt)
+        ;
+\end{tikzpicture}
+\normalsize
+
+
 \end{landscape}
 
