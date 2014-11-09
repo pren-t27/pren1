@@ -27,14 +27,14 @@ do
     cd $homedir/projektanforderungen
     pdflatex projektanforderungen.tex
 
+    cd $homedir/projektmanagement
+    pdflatex projektmanagement.tex
+
     cd $homedir/protocol
     for j in *.tex
     do
         pdflatex $j
     done
-
-    cd $homedir/team
-    pdflatex team.tex
 
     cd $homedir/technologierecherche
     pdflatex technologierecherche.tex
