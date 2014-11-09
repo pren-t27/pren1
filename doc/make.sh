@@ -21,9 +21,6 @@ do
     cd $homedir/matrix
     pdflatex matrix.tex
 
-    cd $homedir/produktanforderungen
-    pdflatex produktanforderungen.tex
-
     cd $homedir/projektanforderungen
     pdflatex projektanforderungen.tex
 
