@@ -13,12 +13,16 @@
     \item Direktantrieb
     \item Ballnachführung
 \end{itemize}
+Der Ball wird mit einem Schwungrad beschleunigt. 
 
 \subsection{Konzept Korbfindung}
 \begin{itemize}
     \item Kamera
     \item Bilderkennung
 \end{itemize}
+Um den Korb zu finden wird eine Kamera verwendet. Das Kamerabild wird mit der 
+freien Bibliothek OpenCV verarbeitet. Die Position des Korbes wird 
+anschliessend an den Roboter geschickt. 
 
 \subsection{Konzept Ausrichtung}
 \begin{itemize}
@@ -26,12 +30,19 @@
     \item Schrittmotor
     \item Endschalter
 \end{itemize}
+Der Roboter erhält vom Computer die Lage des Korbes auf dem Spielfeld. 
+Daraufhin wird der Turm in die korrekte Lage gedreht um den Ball werfen zu 
+können. Der Turm wird dabei mit einem Schrittmotor angetrieben. 
 
 \subsection{Konzept Kommunikation}
 \begin{itemize}
     \item Bluetooth zu Roboter
     \item WLAN zu Kamera
 \end{itemize}
+Das Kamerabild wird via WLAN zum PC übertragen. Die Kommunikation zum Roboter 
+erfolgt über Bluetooth. Dabei wird eine Serielle Verbindung über Bluetooth 
+verwendet. 
+
 
 \subsection{Konzept Energieversorgung}
 \begin{itemize}
@@ -39,4 +50,4 @@
     \item 24 .. 36 V
     \item Regler für 5 V, 3.3 V
 \end{itemize}
-
+Für die Versorgung des Roboters dient ein Bleiakku. 
