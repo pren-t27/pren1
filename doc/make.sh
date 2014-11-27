@@ -21,20 +21,17 @@ do
     cd $homedir/matrix
     pdflatex matrix.tex
 
-    cd $homedir/produktanforderungen
-    pdflatex produktanforderungen.tex
-
     cd $homedir/projektanforderungen
     pdflatex projektanforderungen.tex
+
+    cd $homedir/projektmanagement
+    pdflatex projektmanagement.tex
 
     cd $homedir/protocol
     for j in *.tex
     do
         pdflatex $j
     done
-
-    cd $homedir/team
-    pdflatex team.tex
 
     cd $homedir/technologierecherche
     pdflatex technologierecherche.tex
