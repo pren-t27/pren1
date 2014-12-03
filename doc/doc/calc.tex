@@ -1,39 +1,39 @@
-\section{Berechnungen}
+\subsection{Berechnungen}
 
-\subsection{Spielfeld}
+\subsubsection{Spielfeld}
 \begin{figure}[h!]          
     \centering             
     \includegraphics[width=0.8\textwidth]{fig/Bild_Spielfeld.png}    
     \caption{Spielfeld}
     
-    \label{fig:bild}        % Label um auf die Grafik zu verweisen. Anwendung: Siehe Abbildung \ref{fig:bild}
+    \label{fig:spielfeld}        % Label um auf die Grafik zu verweisen. Anwendung: Siehe Abbildung \ref{fig:bild}
                             % Bitte einen kurzen, prägnanten Namen verwenden
 \end{figure}
 \noindent
 Angenommen das Gerät wird im Startfeld mittig an der Startlinie positioniert, 
-und ausschliesslich mit einer drehbaren Abschussvorrichtung ausgerüstet, und 
-der Korb wird ganz am Rand des Feldes positioniert, ergibt sich für die 
-maximale Wurflänge lmax folgender Wert: 
+ausschliesslich mit einer drehbaren Abschussvorrichtung ausgerüstet, und 
+der Korb ganz am Rand des Feldes positioniert, so ergibt sich für die 
+maximale Wurflänge $l_{max}$ folgender Wert: 
 
 \[\ l_\text{max} = \sqrt{(600mm)^2 + (1900mm)^2} = 1992.49mm \]
 
 Somit ergibt sich im schlechtesten Fall ein Längenunterschied von ca 9.3 cm. 
-Je nachdem wie hoch die Wurfgenauigkeit ist, könnte man die 9.3cm in 
+Je nachdem wie, hoch die Wurfgenauigkeit ist, könnte man die 9.3cm in 
 Anbetracht des Korbdurchmessers von 30cm fast vernachlässigen, und ein 
 Drehturm mit immer gleicher Wurflänge konstruieren. Voraussetzung ist, dass 
 eine gute Zielgenauigkeit erreicht werden kann.
 
-\subsection{Berechnungen Ballwurf}
+\subsubsection{Berechnungen Ballwurf}
 Angenommen der Ball wird auf der Höhe des Korbes abgeworfen, kann mit 
 folgender Formel berechnet werden, mit welcher Geschwindigkeit der Ball 
 geworfen werden muss, falls er in einem Winkel von 65º geworfen wird:
 %
 \[ v_0 
-= \sqrt{ \frac{s_x}{\sin(2\alpha)} \cdot g } 
+= \sqrt{ \frac{s_x}{\sin(2 \cdot \alpha)} \cdot g } 
 = \sqrt{ \frac{1.9m}{\sin(2 \cdot 65^\circ)} \cdot 9.81 \frac{m}{s^2}} 
 = 4.93 \frac{m}{s} \]
 %
-Die maximale Höhe von 1.8 Metern darf nicht überschritten werden. Die Höhe die 
+Die maximale Höhe von 1.8 Metern darf nicht überschritten werden. Die Höhe die, 
 der Ball erreicht lässt sich folgendermassen berechnen:
 %
 \[ h_\text{max} 
@@ -41,7 +41,7 @@ der Ball erreicht lässt sich folgendermassen berechnen:
 = \frac{4.93 \frac{m}{s}^2 \cdot \sin(65^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} 
 = 1.018m \]
 %
-Die Zeit, die der Ball braucht bis er im Korb ist, lässt sich folgendermassen 
+Die Zeit, die der Ball braucht, bis er im Korb ist, lässt sich folgendermassen 
 berechnen:
 %
 \[ t = \frac{s_x}{v_0 \cdot \cos(\alpha)} 
@@ -60,8 +60,8 @@ Nun werden die gleichen Rechnungen mit einem Winkel von 70º durchgeführt:
 \[ t = \frac{s_x}{v_0 \cdot \cos(\alpha)} 
 = \frac{1.9m}{5.385 \frac{m}{s} \cdot \cos(70^\circ)} = 1.032s \]
 %
-Geht man nun beispielsweise davon aus, dass die Abschussgenauigkeit ± 0.3 m/s 
-beträgt, kann berechnet werden, mit welchem Winkel die Distanz mehr variiert:
+Geht man nun beispielsweise davon aus, dass die Abschussgenauigkeit um $\pm$ 0.3 m/s 
+variiert, kann berechnet werden, mit welchem Winkel die Distanz mehr variiert:
 
 \noindent
 Winkel 65º:
@@ -78,8 +78,8 @@ Winkel 70º:
 
 \[ s_\text{xmax} = 2.118m \hspace{30mm} s_\text{xmin} = 1.694m \]
 %
-Bei einer Abschussgeschwindigkeitsänderung von lediglich ± 0.3 m/s ergibt sich 
-bereits eine Abweichung der Wurfweite von ± 20-25cm. Die Geschwindigkeit muss 
+Bei einer Abschussgeschwindigkeitsänderung von lediglich $pm$ 0.3 m/s ergibt sich 
+bereits eine Abweichung der Wurfweite von $pm$ 20-25cm. Die Geschwindigkeit muss 
 somit ziemlich genau eingestellt werden können und sehr konstant sein.
 
 \noindent
