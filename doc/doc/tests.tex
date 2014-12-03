@@ -155,31 +155,17 @@ Korb an 3 verschiedenen Stellen platziert.
 Beispielbilder (jeweils eins bei jedem Hintergrund):
 
 \begin{figure}[h!]
-<<<<<<< HEAD
-	\centering
-	\includegraphics[width=0.5\textwidth]{fig/korb4.jpg}
-	\caption{Hintergrund einfarbig}
-	\label{fig:Korb_HEinfarbig}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.5\textwidth]{fig/korb1.jpg}
-	\caption{Hintergrund enthält schwarz}
-	\label{fig:Korb_HSchwarz}
-=======
     \centering
-    \includegraphics[width=0.3\textwidth]{fig/korb4.jpg}
+    \includegraphics[width=0.5\textwidth]{fig/korb4.jpg}
     \caption{Hintergrund einfarbig}
     \label{fig:Korb_HEinfarbig}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.3\textwidth]{fig/korb1.jpg}
+    \includegraphics[width=0.5\textwidth]{fig/korb1.jpg}
     \caption{Hintergrund enthält schwarz}
     \label{fig:Korb_HSchwarz}
->>>>>>> 86ea17783215ad95dad91f61b17216cac29b3bc8
 \end{figure}
 
 Abbildung \ref{fig:Korb_HSchwarz} zeigt einen Hintergrund bei dem zusätzlich 
@@ -198,49 +184,15 @@ Als erstes wird eines der Beispielbilder geladen.\\
 Es folgen folgende Schritte:\\
 %
 \begin{itemize}
-<<<<<<< HEAD
-	\item Das Bild wird geladen und in ein HSV-Bild umgewandelt
-	\begin{itemize}
-		\item HSV steht für einen Farbwertebereich der mit Hughe, Saturation, Value beschrieben wird.
-		\item Im Folgenden ein Bild des HSV-Farbbereichs:\\
-		\begin{figure}[h!]
-			\centering
-			\includegraphics[width=0.5\textwidth]{fig/HSV_cylinder.jpg}
-			\caption{HSV-Farbspektrum}
-			\label{fig:HSV-Farbspektrum}
-		\end{figure}
-	\end{itemize}
-	\item Es folgt eine HSV-Filterung. Dafür sind beim erstellten Programm 3 Slider angebracht. Um mit den Werten zu experimentieren und die optimalen Ergebnisse zu erzielen bei erzeugen eines Schwarz-Weiss Bildes
-	\begin{itemize}
-		\item Die 2 Slider für Hue und Saturation sind auf den Minimumwert 0 und Maximalwert 256 Eingestellt. Dieses können so belassen werden
-		\item Der 3. Slider steht für den Value. Mit welchem die Dunklen werte gefiltert werden. Hier wird mit einer Grundeinstellung von Minimum 0 und Maximal 15 gearbeitet.
-		\begin{itemize}
-			\item Zum Experimentieren kann der Slider verschoben werden und der Filter erneut angewendet werden.
-		\end{itemize}
-	\end{itemize}
-	\item Nach der Filterung ist das Bild noch von „Farb-Rauschen“ erfüllt. Dieses Rauschen wird mit dem „Eroden“ herausgefiltert.
-	\begin{itemize}
-		\item Für das erodieren wird mit 5*5 Pixel grossem Filter gearbeitet. Alles was diesem Wert entspricht wird von Weiss in Schwarz umgewandelt.
-		\item So werden kleine ungewollte weisse Pixel aus dem Bild entfernt.
-		\item Dieser Vorgang wird 2 Mal auf das Bild angewendet.
-	\end{itemize}
-	\item Nach dem Erodieren muss noch ein „Dilate“ ausgeführt werden.
-	\begin{itemize}
-		\item Damit werden ungewolltes entfernen wieder Rückgängig gemacht indem Pixelflächen wieder vergrössert werden.
-		\item Hier wird mit einem Wert von 15*15 Pixeln gearbeitet.
-		\item Das „Dilate“-Elements wird 2 Mal auf das Bild angewendet.
-	\end{itemize}
-	\item Nach diesen Massnahmen sollte nur noch der Korb als weisse Fläche auf dem Bild zu sehen sein und der Rest ist schwarz.
-=======
     \item Das Bild wird geladen und in ein HSV-Bild umgewandelt
     \begin{itemize}
         \item HSV steht für einen Farbwertebereich der mit Hughe, Saturation, 
             Value beschrieben wird.
         \item Im Folgenden ein Bild des HSV-Farbbereichs:\\
-        \begin{figure}[!h]
+        \begin{figure}[h!]
             \centering
-            % \includegraphics[width=0.3\textwidth]{fig/Datei_HSV_cylinder.jpg}
-            \caption{VHS-Farbspektrum}
+            \includegraphics[width=0.5\textwidth]{fig/HSV_cylinder.jpg}
+            \caption{HSV-Farbspektrum}
             \label{fig:HSV-Farbspektrum}
         \end{figure}
     \end{itemize}
@@ -276,33 +228,25 @@ Es folgen folgende Schritte:\\
     \end{itemize}
     \item Nach diesen Massnahmen sollte nur noch der Korb als weisse Fläche 
         auf dem Bild zu sehen sein und der Rest ist schwarz.
->>>>>>> 86ea17783215ad95dad91f61b17216cac29b3bc8
 \end{itemize}
 
 Ergebniss für die Abbildung \ref{fig:Korb_HEinfarbig} nach dem Anwenden der 
 Filter sieht folgendermassen aus:
 
 \begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\textwidth]{fig/Korberkennung1.png}
-	\caption{Links nach Erode und Dilate - Rechts nur mit HSV Filterung}
-	\label{fig:Korb_Erkennung}
+    \centering
+    \includegraphics[width=0.7\textwidth]{fig/Korberkennung1.png}
+    \caption{Links nach Erode und Dilate - Rechts nur mit HSV Filterung}
+    \label{fig:Korb_Erkennung}
 \end{figure}
 
 \subsubsection{Testprogramm}
 Anbei sieht man ein Screenshot des Testprogramms:
 \begin{figure}[h!]
-<<<<<<< HEAD
-	\centering
-	\includegraphics[width=0.7\textwidth]{fig/Testprogramm.png}
-	\caption{Screenshot Testprogramm}
-	\label{fig:Korb_Testprogramm}
-=======
     \centering
-    \includegraphics[width=0.3\textwidth]{fig/Testprogramm.png}
+    \includegraphics[width=0.7\textwidth]{fig/Testprogramm.png}
     \caption{Screenshot Testprogramm}
     \label{fig:Korb_Testprogramm}
->>>>>>> 86ea17783215ad95dad91f61b17216cac29b3bc8
 \end{figure}
 
 Abbildung \ref{fig:Korb_Testprogramm} zeigt die Einstellungsmöglichkeiten des 
