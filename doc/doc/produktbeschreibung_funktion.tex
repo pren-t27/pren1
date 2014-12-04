@@ -59,13 +59,17 @@ Abstand des vollständig aufgewickelten Bands zum Beschleunigungsrad begrenzt,
 so dass ein Verklemmen nicht möglich ist.
 
 \subsection{Bilderkennung}
-Der Korb wird mittels einer Bilderkennungssoftware, die auf einem 
-angeschlossenen PC betrieben wird, erkannt und die so gewonnenen 
-Positionsdaten an die entsprechenden Ansteuerungskomponenten gesendet. Diese 
-können anschliessend den Winkel in horizontaler Richtung, sowie die 
-Abschussgeschwindigkeit und somit die Abschussgeschwindigkeit, mit der Drehzahl des 
-Beschleunigungsrades regeln.
+Ziel der Bilderkennung ist es, zu erkennen wo sich der Kübel auf der Spielfläche befindet. Das Bild muss so verarbeitet werden, dass in einem ersten Schritt der Kübel erkannt wird und in einem zweiten Schritt muss die Position ermittelt werden.
+\subsubsection{Hardware}
+Bei der Bildverarbeitung ist zu beachten, dass sie sehr rechen- wie auch speicherintensiv ist. Um eine Analyse eines Bildes durchzuführen sind diverse mathematische Funktionen wie auch farb-analytische Schritte nötig. Je schneller die Berechnung ausgeführt werden soll, umso eine grössere Rechenleistung ist nötig. Deshalb wurde entschieden, die Bildverarbeitung auf ein Notebook auszulagern. Dieses sollte neben genügend Speicher auch ausreichend Rechenleistung zu Verfügung stellen können. Da sämtliche Studierende bereits über ein Notebook verfügen, vereinfacht sich die gemeinsame Entwicklung auf dem Endgerät.
+
+\subsubsection{Software}
+Als Entwicklungssprache für die Bildverarbeitung hat sich die Gruppe, basierend auf der Technologierecherche, für Java entschieden. Dies vor allem auch weil sämtliche Elektrotechnik- und Informatikstudierende aufgrund der besuchten Module bereits Erfahrungen mit Java sammeln konnten. Doch Java ist auch bezüglich der Komptabilität und Schnittstellen mit diversen Entwicklungsumgebungen und Sprachen die erste Wahl. Die vorhandenen Entwicklungsumgebungen können dank der breiten Community durch die zahlreichen Plug-ins fast beliebig erweitert werden.
+Die Technologierecherche hat ergeben, dass sich OpenCV als geeignetste Bildverarbeitungsbibliothek zeigt. Dies unter anderem auch, weil es über eine sehr grosse und auch aktive Community verfügt. Ebenfalls auf Grund der grossen Beliebtheit von OpenCV werden sehr viele Plattformen unterstützt, was uns bei der Wahl unserer Betriebssystemen, Komponenten und Entwicklungsumgebungen kaum einschränkt.
 
 \subsection{Signalübertragung}
-Die Übertragung des Startsignals, sowie die Anzeige des Endsignals erfolgt per 
-WLAN über einen zweiten Laptop.
+Die Signalübertragung befasst sich mit der Kommunikation zwischen den beteiligten Komponenten. Einerseits wird ein leichtgewichtiges Signal benötigt um den Start und das Ende der Aufgabe zu symbolisieren. Für die Übertragung des Bildes ist allerdings ein Übermittlungsstandard nötig, der auf eine grössere Bandbreite zurückgreifen kann.
+\subsubsection{Start- und Endsignal}
+Das Startsignal wird vom Laptop auf den Roboter übertragen. Nachdem dieser die Aufgabe ausgeführt hat, sendet dieser das Endsignal an den Laptop. Aufgrund der Technologierecherche wurde entschieden, dass Bluetooth sich am Besten für diese Übertragung eignet. Nach der Erweiterung durch entsprechende Module unterstützt Bluetooth sowohl Mikrocontroller als auch reguläre Computer. Die vorgegebenen Schnittstellen vereinfachen die drahtlose Kommunikation.
+\subsubsection{Bildübermittlung}
+Je höher die Auflösung des vorhandenen Bildes, desto genauer kann die Position vom Laptop bestimmt werden. Je höher die Auflösung, desto grösser wird die Bilddatei die zum Laptop übermittelt werden muss. Am naheliegendsten wäre die Verwendung von Bluetooth gewesen. Doch aufgrund von ungenügender Bandbreite muss auf einen anderen Übermittlungsstandard zurückgegriffen werden. Die Bildübertragung kann unabhängig vom Mikrocontroller geschehen. So kann sich dieser alleine auf die Abarbeitung des Schiessvorgangs konzentrieren. Das Bild wird separat entweder direkt von einer Kamera oder von einem weitere Mikrocontroller übermittelt. Um diese Übermittlung durchzuführen wurde WLAN ausgewählt. Dies vorallem weil WLAN ein sehr verbreiteter Standard ist und fast von allen Geräten unterstützt wird. Zudem können im Handel preisgünstig WLAN-fähige Kameras erworben werden.
