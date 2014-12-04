@@ -1,0 +1,100 @@
+\subsection{Ultraschallsensor HC-SR04}
+Diese Messung wird gemeinsam mit Gruppe 39 durchgeführt. \\
+Ein sehr verbreitetes Modul für die Distanzmessung mittels Ultraschall ist 
+das Modul HC-SR04. Mit diesem werden Messungen durchgeführt um festzustellen, 
+ob es geeignet ist, einen Eimer zu detektieren. 
+
+\subsubsection{Messmittel}
+\begin{zebratabular}{lll}
+    \rowcolor{gray} Gerät &
+        Typ &
+        Nummer \\
+    Speisegerät &
+        Hameg ... &
+        SN ... \\
+    Oszilloskop &
+        Agilent &
+        SN ... \\
+    Pulsgenerator &
+        Hameg &
+        SN ... \\
+    Mainframe &
+        Hameg 800? &
+        SN ... \\
+\end{zebratabular} \\
+Die Messungen werden im Raum B332c durchgeführt. 
+
+\subsubsection{Ansteuerung}
+\begin{zebratabular}{ll}
+    \rowcolor{gray} Pin & Beschreibung \\
+    VCC     & +5V DC \\
+    Trig    & Trigger-Eingang (Startsignal) \\
+    Echo    & Echo-Feedback \\
+    GND     & Masse (0V) \\
+\end{zebratabular}
+
+\subsubsection{Testeimer}
+Als Testeimer wird der Abfalleimer aus dem Raum C200 verwendet. \\
+\begin{zebratabular}{ll}
+    \rowcolor{gray} Eigenschaft & Wert \\
+    Durchmesser oben    & 38 cm \\
+    Durchmesser unten   & 33 cm \\
+    Höhe                & 48 cm \\
+    Farbe               & schwarz (matt) \\
+    Material            & Kunststoff () \\
+    Hersteller          & Helit \\
+    Typ                 & 61062 \\
+\end{zebratabular}
+
+\subsubsection{Messung Messgenauigkeit}
+Die folgenden Werte sind statistisch aus mindestens 1000 Einzelmessugen 
+ermittelt. \\
+\begin{zebratabular}{lll}
+    \rowcolor{gray} Abstand [cm] & Impuls mean [ms] & Std. Dev. [$\mu$s] \\
+    50  & 2.987 & 2.4 \\
+    60  & 3.503 & 2.4 \\
+    70  & 4.060 & 10 \\
+    80  & 4.766 & 24 \\
+    90  & 5.230 & 10 \\
+    100 & 5.807 & 11 \\
+    110 & 6.413 & 13 \\
+    120 & 7.040 & 16 \\
+    130 & 7.722 & 22 \\
+    140 & 8.229 & 16 \\
+    150 & 8.854 & 15 \\
+    160 & 9.500 & 43 \\
+    170 & 10.06 & 22 \\
+    180 & n.a.  & n.a. \\
+\end{zebratabular} \\
+Anschliessend wird eine weitere Messung durchgeführt. Dabei wird eine 
+Holzplatte mit einem Abstand von 180 cm verwendet. Als Platte dient ein Tablar 
+aus dem Raum B332c. Der Median beträgt 10.45 ms bei einer Standardabweichung 
+von von 9.7 $\mu$s. \\
+$\to$ Deutlich besseres Signal auf flachen Gegenständen als auf Runden. 
+
+\subsubsection{Messung seitliche Empfindlichkeit}
+Um die seitliche Empfindlichkeit zu testen, wird der Eimer unter einem 
+bestimmten Winkel vor dem Sensor aufgestellt. Der Abstand wird dabei 
+so eingestellt, dass der Sensor den Eimer gerade noch erkennt. Die erzielte
+Distanz wird gemessen. \\
+\begin{zebratabular}{ll}
+    Winkel [$^\circ$] & Messbereich [cm] \\
+    0   & 180 \\
+    5   & 123 \\
+    10  & 120 \\
+    15  & 119 \\
+    20  & 113 \\
+    25  & 106 \\
+    30  & 104 \\
+    35  & 77  \\
+    40  & 0   \\
+\end{zebratabular} \\
+Zwischen 25$^\circ$ und 30$^\circ$ hat der Sensor in einem Abstand von 75 bis 
+90 cm einen blinden Bereich, in welchem der Eimer nicht erkannt wird. 
+
+\subsubsection{Fazit}
+Der Sensor ist nicht geeignet, um den Eimer zu finden, da der Sensor über 
+einen zu breiten und zu ungenau definierten Winkel empfindlich ist. Der 
+HC-SR04 wird somit nicht weiter als Sensor zur Detektion des Eimers 
+weiterverfolgt. 
+
