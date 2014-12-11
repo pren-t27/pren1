@@ -28,7 +28,7 @@ Ballbeschleunigung als auch die Komponenten der Ballnachführung befestigt.
 Das unterste Element des Gerätes besteht aus einer kleinen, möglichst leichten 
 Bodenplatte. An dieser Bodenplatte werden drei Beine (Rohrform) angeschraubt. Mit 
 zwei Axial-Kugellagern wird ein grosses Zahnrad (Zähnezahl z1=120) auf der Bodenplatte 
-befestigt. Auf dieses wird anschliessend der gesamte Aufbau bestehend aus Turm, Balllagerung und Abschussvorrichtung montiert. 
+befestigt. Auf dieses wird anschliessend der gesamte Aufbau, bestehend aus Turm, Balllagerung und Abschussvorrichtung, montiert. 
 
 \begin{figure}[h!]          
 	\centering             
@@ -44,11 +44,11 @@ QMot.eu). Bei 200 Schritten ergibt sich eine Genauigkeit von 1.8$^\circ$, mit ei
 bedeutet für eine Distanz von 1900mm eine seitliche Abweichung von 
 $1900 \cdot \tan(0.375^\circ)= 12.5mm$. Somit wird diese Abweichung bei einem 
 Korbdurchmessen von 30cm keine Rolle spielen. Des Weiteren wird mit einem 
-geeigneten Treiber für den Schrittmotor sogar noch eine höhere Genauigkeit erreicht, da Zwischenschritte eingebaut werden können. Diese sind jedoch vom Trägheitsmoment der Konstruktion und vom Drehmoment des Motor abhängig. 
+geeigneten Treiber für den Schrittmotor sogar noch eine höhere Genauigkeit erreicht, da Zwischenschritte eingebaut werden können. Diese sind jedoch vom Trägheitsmoment der Konstruktion und vom Drehmoment des Motors abhängig. 
 
 \subsection{Ballbeschleunigung}
 Das Rad für die Ballbeschleunigung soll auf der Oberseite des Balllagers 
-positioniert sein. Auf der Unterseite wird eine geeignete Platte befestigt um 
+positioniert sein. Auf der Unterseite wird eine geeignete Platte befestigt, um 
 so den benötigten Anpressdruck zu erzeugen. 
 Die Beschleunigung des Rads soll mittels einem integrierten brushless Motor erfolgen. Hierzu wird das Rad selbst hergestellt und die benötigten Magnete direkt in der Felge verbaut. Das Grundgerüst für den Stator kann aus einem alten Motor ausgebaut und verwendet werden. Jedoch wird die Wicklung für eine angepasste Funktionalität selbst aufgebracht.
 \begin{figure}[h!]          
@@ -67,19 +67,19 @@ Abschussrad. Durch einen Spalt in der Seitenwand des Balllagers wird das Band
 von der Aussenseite in die Innenseite geführt. Gleichzeitig wird so der 
 Abstand des vollständig aufgewickelten Bands zum Beschleunigungsrad begrenzt, 
 so dass ein Verklemmen nicht möglich ist.
-Die Trommel wird durch einen, mit einem Zahnriemen verbundenen Schrittmotor angetrieben.
+Die Trommel wird durch einen mit einem Zahnriemen verbundenen Schrittmotor angetrieben.
 
 \subsection{Bilderkennung}
-Ziel der Bilderkennung ist es, zu erkennen wo sich der Korb auf der Spielfläche befindet. Das Bild muss so verarbeitet werden, dass in einem ersten Schritt der Korb erkannt wird und in einem zweiten Schritt die Position errechnet werden kann.
+Ziel der Bilderkennung ist es, zu erkennen, wo sich der Korb auf der Spielfläche befindet. Das Bild muss so verarbeitet werden, dass in einem ersten Schritt der Korb erkannt wird und in einem zweiten Schritt die Position errechnet werden kann.
 \subsubsection{Hardware}
-Bei der Bildverarbeitung ist zu beachten, dass sie sehr rechen- wie auch speicherintensiv ist. Um eine Analyse eines Bildes durchzuführen sind diverse mathematische Funktionen wie auch farb-analytische Schritte nötig. Je schneller die Berechnung ausgeführt werden soll, desto grössere Rechenleistungen werden benötigt. Deshalb wurde entschieden, die Bildverarbeitung auf ein Notebook auszulagern. Dieses sollte neben genügend Speicher auch ausreichend Rechenleistung zu Verfügung stellen können. Da sämtliche Studierende bereits über ein Notebook verfügen, vereinfacht sich die gemeinsame Entwicklung auf dem Endgerät.
+Bei der Bildverarbeitung ist zu beachten, dass sie sehr rechen- wie auch speicherintensiv ist. Um eine Analyse eines Bildes durchzuführen sind diverse mathematische Funktionen wie auch farbanalytische Schritte nötig. Je schneller die Berechnung ausgeführt werden soll, desto grössere Rechenleistung wird benötigt. Deshalb wurde entschieden, die Bildverarbeitung auf ein Notebook auszulagern. Dieses sollte neben genügend Speicher auch ausreichend Rechenleistung zur Verfügung stellen können. Da sämtliche Studierende bereits über ein Notebook verfügen, vereinfacht sich die gemeinsame Entwicklung auf dem Endgerät.
 
 \subsubsection{Software}
-Als Entwicklungssprache für die Bildverarbeitung hat sich die Gruppe, basierend auf der Technologierecherche, für Java entschieden. Dies vor allem auch weil sämtliche Elektrotechnik- und Informatikstudierende aufgrund der besuchten Module bereits Erfahrungen mit Java sammeln konnten. Doch Java ist auch bezüglich der Komptabilität und Schnittstellen mit diversen Entwicklungsumgebungen und Sprachen die erste Wahl. Die vorhandenen Entwicklungsumgebungen können dank der breiten Community durch die zahlreichen Plug-ins fast beliebig erweitert werden.
-Die Technologierecherche hat ergeben, dass sich OpenCV als geeignetste Bildverarbeitungsbibliothek zeigt. Dies unter anderem auch, weil es über eine sehr grosse und auch aktive Community verfügt. Ebenfalls auf Grund der grossen Beliebtheit von OpenCV werden sehr viele Plattformen unterstützt, was uns bei der Wahl unserer Betriebssystemen, Komponenten und Entwicklungsumgebungen kaum einschränkt.
+Als Entwicklungssprache für die Bildverarbeitung hat sich die Gruppe, basierend auf der Technologierecherche, für Java entschieden. Dies vor allem auch, weil sämtliche Elektrotechnik- und Informatikstudierende aufgrund der besuchten Module bereits Erfahrungen mit Java sammeln konnten. Doch Java ist auch bezüglich der Komptabilität und Schnittstellen mit diversen Entwicklungsumgebungen und Sprachen die erste Wahl. Die vorhandenen Entwicklungsumgebungen können dank der breiten Community durch die zahlreichen Plug-ins fast beliebig erweitert werden.
+Die Technologierecherche hat ergeben, dass OpenCV die geeignetste Bildverarbeitungsbibliothek ist. Dies unter anderem auch, weil es über eine sehr grosse und auch aktive Community verfügt. Ebenfalls aufgrund der grossen Beliebtheit von OpenCV werden sehr viele Plattformen unterstützt, was uns bei der Wahl unserer Betriebssysteme, Komponenten und Entwicklungsumgebungen kaum einschränkt.
 
 \subsection{Signalübertragung}
-Die Signalübertragung befasst sich mit der Kommunikation zwischen den beteiligten Komponenten. Einerseits wird ein leichtgewichtiges Signal benötigt um den Start und das Ende der Aufgabe zu symbolisieren. Für die Übertragung des Bildes ist allerdings ein Übermittlungsstandard nötig, der auf eine grössere Bandbreite zurückgreifen kann.
+Die Signalübertragung befasst sich mit der Kommunikation zwischen den beteiligten Komponenten. Einerseits wird ein leichtgewichtiges Signal benötigt, um den Start und das Ende der Aufgabe zu symbolisieren. Andererseits wird auch für die Übermittlung der Befehle an den Roboter ein solches eingesetzt werden. Für die Übertragung des Bildes ist allerdings ein Übermittlungsstandard nötig, der auf eine grössere Bandbreite zurückgreifen kann.
 
 \begin{figure}[h!]          
 	\centering             
@@ -90,6 +90,6 @@ Die Signalübertragung befasst sich mit der Kommunikation zwischen den beteiligt
 \end{figure}
 \noindent
 \subsubsection{Start- und Endsignal}
-Das Startsignal wird drahtlos vom Laptop auf den Roboter übertragen. Nachdem dieser die Aufgabe ausgeführt hat, sendet dieser wiederum drahtlos das Endsignal an den Laptop. Aufgrund der Technologierecherche wurde entschieden, dass Bluetooth sich am besten für diese Übertragung eignet. Nach der Erweiterung durch entsprechende Module unterstützt Bluetooth sowohl Mikrocontroller als auch reguläre Computer. Die vorgegebenen Schnittstellen vereinfachen die drahtlose Kommunikation.
+Das Startsignal wird drahtlos vom Laptop auf den Roboter übertragen. Nachdem dieser die Aufgabe ausgeführt hat, sendet er wiederum drahtlos das Endsignal an den Laptop. Aufgrund der Technologierecherche wurde entschieden, dass Bluetooth sich am besten für diese Übertragung eignet. Nach der Erweiterung durch entsprechende Module unterstützt Bluetooth sowohl Mikrocontroller als auch reguläre Computer. Die vorgegebenen Schnittstellen vereinfachen die drahtlose Kommunikation.
 \subsubsection{Bildübermittlung}
-Je höher die Auflösung des vorhandenen Bildes, desto genauer kann die Position vom Laptop bestimmt werden. Je höher die Auflösung, desto grösser wird die Bilddatei die zum Laptop übermittelt werden muss. Am naheliegendsten wäre die Verwendung von Bluetooth gewesen. Doch aufgrund von ungenügender Bandbreite muss auf einen anderen Übermittlungsstandard zurückgegriffen werden. Die Bildübertragung kann unabhängig vom Mikrocontroller geschehen. So kann sich dieser alleine auf die Abarbeitung des Schiessvorgangs konzentrieren. Das Bild wird separat entweder direkt von einer Kamera oder von einem weiteren Mikrocontroller übermittelt. Um diese Übermittlung durchzuführen wurde WLAN ausgewählt. Dies vorallem, weil WLAN ein sehr verbreiteter Standard ist und fast von allen Geräten unterstützt wird. Zudem können im Handel preisgünstig WLAN-fähige Kameras erworben werden.
+Je höher die Auflösung des vorhandenen Bildes ist, desto genauer kann die Position vom Laptop bestimmt werden. Je höher die Auflösung, desto grösser wird die Bilddatei, die zum Laptop übermittelt werden muss. Am naheliegendsten wäre die Verwendung von Bluetooth gewesen. Doch aufgrund von ungenügender Bandbreite muss auf einen anderen Übermittlungsstandard zurückgegriffen werden. Die Bildübertragung kann unabhängig vom Mikrocontroller geschehen. So kann sich dieser alleine auf die Abarbeitung des Schiessvorgangs konzentrieren. Das Bild wird separat entweder direkt von einer Kamera oder von einem weiteren Mikrocontroller übermittelt. Um diese Übermittlung durchzuführen wurde WLAN ausgewählt. Dies vorallem, weil WLAN ein sehr verbreiteter Standard ist und fast von allen Geräten unterstützt wird. Zudem können im Handel preisgünstig WLAN-fähige Kameras erworben werden.
