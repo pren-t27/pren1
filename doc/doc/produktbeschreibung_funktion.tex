@@ -47,6 +47,7 @@ geeigneten Treiber sogar noch eine höhere Genauigkeit erreicht
 Das Rad für die Ballbeschleunigung soll auf der Oberseite des Balllagers 
 positioniert sein. Auf der Unterseite wird eine geeignete Platte befestigt um 
 so den benötigten Anpressdruck zu erzeugen. 
+Die Beschleunigung des Rads soll mittels einem integrierten brushless Motor erfolgen. Hierzu wird das Rad selbst hergestellt und die benötigten Magnete direkt in der Felge verbaut. Das Grundgerüst für den Stator kann aus einem alten Motor ausgebaut und verwendet werden. Jedoch wird die Wicklung für eine angepasste Funktionalität selbst aufgebracht.
 
 \subsection{Ballnachführung}
 Die Ballnachführung wird durch ein im Inneren des Balllagers verlaufendes Band 
@@ -56,9 +57,10 @@ Abschussrad. Durch einen Spalt in der Seitenwand des Balllagers wird das Band
 von der Aussenseite in die Innenseite geführt. Gleichzeitig wird so der 
 Abstand des vollständig aufgewickelten Bands zum Beschleunigungsrad begrenzt, 
 so dass ein Verklemmen nicht möglich ist.
+Die Trommel wird durch einen, mit einem Zahnriemen verbundenen Schrittmotor angetrieben.
 
 \subsection{Bilderkennung}
-Ziel der Bilderkennung ist es, zu erkennen wo sich der Kübel auf der Spielfläche befindet. Das Bild muss so verarbeitet werden, dass in einem ersten Schritt der Kübel erkannt wird und in einem zweiten Schritt die Position errechnet werden kann.
+Ziel der Bilderkennung ist es, zu erkennen wo sich der Korb auf der Spielfläche befindet. Das Bild muss so verarbeitet werden, dass in einem ersten Schritt der Korb erkannt wird und in einem zweiten Schritt die Position errechnet werden kann.
 \subsubsection{Hardware}
 Bei der Bildverarbeitung ist zu beachten, dass sie sehr rechen- wie auch speicherintensiv ist. Um eine Analyse eines Bildes durchzuführen sind diverse mathematische Funktionen wie auch farb-analytische Schritte nötig. Je schneller die Berechnung ausgeführt werden soll, desto grössere Rechenleistungen werden benötigt. Deshalb wurde entschieden, die Bildverarbeitung auf ein Notebook auszulagern. Dieses sollte neben genügend Speicher auch ausreichend Rechenleistung zu Verfügung stellen können. Da sämtliche Studierende bereits über ein Notebook verfügen, vereinfacht sich die gemeinsame Entwicklung auf dem Endgerät.
 
@@ -68,6 +70,15 @@ Die Technologierecherche hat ergeben, dass sich OpenCV als geeignetste Bildverar
 
 \subsection{Signalübertragung}
 Die Signalübertragung befasst sich mit der Kommunikation zwischen den beteiligten Komponenten. Einerseits wird ein leichtgewichtiges Signal benötigt um den Start und das Ende der Aufgabe zu symbolisieren. Für die Übertragung des Bildes ist allerdings ein Übermittlungsstandard nötig, der auf eine grössere Bandbreite zurückgreifen kann.
+
+\begin{figure}[h!]          
+	\centering             
+	\includegraphics[width=0.5\textwidth]{fig/kommunikationsablauf.jpg}    
+	\caption{Kommunikationsablauf}
+	
+	\label{fig:Kommunikationsablauf}
+\end{figure}
+\noindent
 \subsubsection{Start- und Endsignal}
 Das Startsignal wird drahtlos vom Laptop auf den Roboter übertragen. Nachdem dieser die Aufgabe ausgeführt hat, sendet dieser wiederum drahtlos das Endsignal an den Laptop. Aufgrund der Technologierecherche wurde entschieden, dass Bluetooth sich am Besten für diese Übertragung eignet. Nach der Erweiterung durch entsprechende Module unterstützt Bluetooth sowohl Mikrocontroller als auch reguläre Computer. Die vorgegebenen Schnittstellen vereinfachen die drahtlose Kommunikation.
 \subsubsection{Bildübermittlung}
