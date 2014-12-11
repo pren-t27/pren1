@@ -1,11 +1,11 @@
 \subsection{Bildverarbeitung}
 
 \subsubsection{Versuchsbeschreibung}
-Im Folgenden wird der Test von OpenCV in Zusammenarbeit mit Java beschrieben. Die Korbfindung soll mittels des frei erhältlichen OpenCV-Frameworks ausgeführt werden.
+Für die Erkennung des Korbes wurde ein Testprogramm in Java geschrieben. Es wurden Fotos des Korbes aus verschiedenen Blickwinkeln und auf unterschiedlichem Hintergrund angefertigt. Mittels dem OpenCV-Framework, welches frei erhältlich ist, wurden verschiedene Algorithmen auf das Bild angewandt um ihn vom Hintergrund abzugrenzen. Das genauere vorgehen wird im weiteren Beschrieben.
 
 \subsubsection{Vorbereitung}
 Zu Testzwecken werden verschiedene Fotos von einem schwarzen Korb angefertigt. 
-Es gibt zwei verschiedene Hintergrundszenarien. Bei jedem Hintergrund wird der 
+Es gibt zwei unterschiedliche Hintergrundszenarien. Bei jedem Hintergrund wird der 
 Korb an 3 verschiedenen Stellen platziert.
 
 Beispielbilder (jeweils eins bei jedem Hintergrund):
@@ -109,7 +109,7 @@ Abbildung \ref{fig:Korb_Testprogramm} zeigt die Einstellungsmöglichkeiten des
 Testprogramms. Es können mittels Slider die Werte für Hue, Saturation und 
 Value angepasst werden. Nach einem Klick auf den Button wird der Filter mit 
 den angegebenen HSV-Werten ausgeführt und in den zwei Bereichen dargestellt. 
-Rechts nur der HSV-Filter und links mit dem erodieren und dem DIlate (wie in 
-Abbildung 4 ersichtlich ist). \\
+Rechts nur der HSV-Filter und links mit dem Ausgeführten "{}Erode"{} und "{}Dilate"{} (wie in 
+\ref{fig:Korb_Erkennung} ersichtlich ist). \\
 Über den Load Image Button können verschiedene Bilder geladen werden, welche 
-in der Dropdownbox zur Verfügung stehen.
+im Dropdownmenu zur Verfügung stehen.

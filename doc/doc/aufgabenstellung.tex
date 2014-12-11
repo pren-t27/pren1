@@ -12,6 +12,7 @@
 Es soll ein Gerät entwickelt werden, das Bälle in einen Korb werfen kann. 
 Dies soll autonom erfolgen. 
 \begin{figure}[h!]
+    \centering
     \begin{tikzpicture}[scale=0.02]
         % playfield frame
         \draw[thick] (0,0) rectangle (150,280);
@@ -36,14 +37,19 @@ Dies soll autonom erfolgen.
         \draw[fill=gray] (0,250) rectangle (150,255);
         \draw[fill=gray] (300,250) rectangle (400,255);
         \draw[fill=white] (300,255) -- (350,255) -- (300,280) -- (300,255);
+        % caption
+        \draw[fill=green]  (450,200) rectangle node[right]{Zielbereich}        (460,210);
+        \draw[fill=red]    (450,180) rectangle node[right]{verbotener Bereich} (460,190);
+        \draw[fill=blue]   (450,160) rectangle node[right]{Bewegungsbereich}   (460,170);
+        \draw[fill=yellow] (450,140) rectangle node[right]{Startbereich}       (460,150);
     \end{tikzpicture}
     \caption{Spielfeld}
     \label{fig:playfield}
 \end{figure}
 In diesem Kapitel werden die vorgegebenen Anforderungen an das Projekt 
-besprochen. Dazu gehören Anforderungen an das Gerät sowie Rahmenbedingungen. 
-In der Spalte Pflicht ist jeweils die Mindestanforderung beschrieben und in 
-der Spalte Wunsch ist die vom Projektteam als Idealfall bezeichnete Leistung 
+besprochen. Dazu gehören Anforderungen an das Gerät, sowie Rahmenbedingungen. 
+In der Spalte Pflicht, ist jeweils die Mindestanforderung beschrieben und in 
+der Spalte Wunsch, ist die vom Projektteam als Idealfall bezeichnete Leistung 
 beschrieben. 
 \subsection{Gerät}
 \tabheader
