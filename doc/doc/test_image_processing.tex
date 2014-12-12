@@ -1,7 +1,7 @@
 \subsection{Bildverarbeitung}
 
 \subsubsection{Versuchsbeschreibung}
-Für die Erkennung des Korbes wurde ein Testprogramm in Java geschrieben. Es wurden Fotos des Korbes aus verschiedenen Blickwinkeln und auf unterschiedlichem Hintergrund angefertigt. Mittels dem OpenCV-Framework, welches frei erhältlich ist, wurden verschiedene Algorithmen auf das Bild angewandt um den Eimer vom Hintergrund abzugrenzen.
+Für die Erkennung des Korbes wurde ein Testprogramm in Java geschrieben. Es wurden Fotos des Korbes aus verschiedenen Blickwinkeln und auf unterschiedlichem Hintergrund angefertigt. Mittels dem OpenCV-Framework, welches frei erhältlich ist, wurden verschiedene Algorithmen auf das Bild angewandt um den Korb vom Hintergrund abzugrenzen.
 
 \subsubsection{Vorbereitung}
 Zu Testzwecken werden verschiedene Fotos von einem schwarzen Korb angefertigt. 
@@ -37,7 +37,7 @@ gewählt wurde. Ebenfalls werden die Ergebnisse präsentiert.\\
 %
 Als erstes wird eines der Beispielbilder geladen.\\
 %
-Es folgen folgende Schritte:\\
+Es folgen diese Schritte:\\
 %
 \begin{itemize}
     \item Das Bild wird geladen und in ein HSV-Bild umgewandelt
@@ -73,7 +73,7 @@ Es folgen folgende Schritte:\\
             Alles was diesem Wert entspricht wird von Weiss in Schwarz 
             umgewandelt.
         \item So werden kleine ungewollte weisse Pixel aus dem Bild entfernt.
-        \item Dieser Vorgang wird 2 Mal auf das Bild angewendet.
+        \item Dieser Vorgang wird zwei Mal auf das Bild angewendet.
     \end{itemize}
     \item Nach dem Erodieren muss noch ein „Dilate“ ausgeführt werden.
     \begin{itemize}
@@ -109,7 +109,7 @@ Abbildung \ref{fig:Korb_Testprogramm} zeigt die Einstellungsmöglichkeiten des
 Testprogramms. Es können mittels Slider die Werte für Hue, Saturation und 
 Value angepasst werden. Nach einem Klick auf den Button wird der Filter mit 
 den angegebenen HSV-Werten ausgeführt und in den zwei Bereichen dargestellt. 
-Rechts nur der HSV-Filter und links mit dem ausgeführten "{}Erode"{} und "{}Dilate"{} (wie in 
+Rechts nur der HSV-Filter und links mit dem ausgeführten "{}Erode"{} und "{}Dilate"{} (wie in Abbildung 
 \ref{fig:Korb_Erkennung} ersichtlich ist). \\
 Über den Load Image Button können verschiedene Bilder geladen werden, welche 
 im Dropdownmenu zur Verfügung stehen.
