@@ -9,28 +9,24 @@ Auswahl der optimalen Kombination, welche in einem nächsten Schritt
 ausgearbeitet wird. Das daraus resultierende, definitive Konzept wird im 
 nachfolgenden Kapitel "'Produktbeschreibung Funktion"' näher erläutert. 
 Das im Anhang beigefügte Dokument "'Brainstorming"' zeigt die ersten Ideen für 
-die verschiedenen Funktionsweisen. Hierbei wurde weder auf Risiken, Kosten 
+die verschiedenen Funktionsweisen. Hierbei wird weder auf Risiken, Kosten 
 noch auf Umsetzbarkeit geachtet. In einem weiteren Schritt werden die 
 sinnvollsten Kombinationen in morphologischen Kästen kombiniert und für die 
 jeweiligen Lösungen erweitert und ausgewertet. 
 
 \subsection{Distanzmessung - optische Erkennung}
-Für das Erkennen des Korbs wurde auf Distanzmessung mittels Laser, Ultraschall oder 
-ähnlichem verzichtet. Hauptsächlich aus dem Grund, weil von der Abteilung Informatik 
-im gesamten Projekt nicht viel Programmieraufwand gefordert ist. Durch die Wahl der 
-optischen Erkennung über eine Kamera ist für die Informatik eine Teilfunktion entstanden, 
-die einiges an Programmieren verlangt. Aus diesem Grund wird in den folgenden 
-morphologischen Kästen auf Distanzmessung als Option verzichtet und standardmässig 
+Für das Erkennen des Korbs kann die Distanzmessung mittels Laser oder Ultraschall 
+aufgrund der Tests in Kapitel \ref{sec:tests} ausgeschlossen werden, da die 
+getesteten Sensoren für die Erkennung des Korbes nicht geeignet sind. 
+Aus diesem Grund wird in den folgenden morphologischen Kästen auf 
+Distanzmessung als Option verzichtet und standardmässig 
 optische Erkennung ausgewählt.
-
 
 \subsection{Variante Bodenobjekt fahrend}
 \subsubsection{Kurzbeschrieb}
 Bei diesem Konzept soll die Abschussvorrichtung fahrend sein. Hierbei kann 
 die  Wurfdistanz zum Ziel verringert werden und auch das Zielen mittels 
 Bewegung erfolgen.
-
-\clearpage
 
 \subsubsection{Morphologischer Kasten}
 % Morphologischer Kasten mit Stichworten
@@ -219,7 +215,8 @@ Hierbei handelt es sich um ein fliegendes Objekt, in der Art eines Quadcopters. 
 \subsubsection{Funktionsweise}
 Mit einem fliegenden Objekt kann die Aufgabe vom Prinzip her relativ zielstrebig bewältigt 
 werden. Allerdings wird es schwierig, eine gut funktionierende Regelung zu entwickeln um das 
-Flugobjekt ruhig in der Luft zu halten, die gewünschte Position genau anzufliegen und ein Wegdriften zu vermeiden. 
+Flugobjekt ruhig in der Luft zu halten, die gewünschte Position genau 
+anzufliegen und ein Wegdriften zu vermeiden. 
 Vom Startpunkt aus bewegt sich das Objekt in der Luft, erkennt den Korb optisch 
 mit einer Kamera und fliegt anschliessend über diesen und wirft dort die Bälle 
 ab. Die Bälle müssten nicht einzeln abgeworfen werden, sie könnten alle zusammen 
@@ -350,8 +347,6 @@ schnell dies passieren kann, ist abhängig von der Konstruktion und von der
 Massenträgheit des Antriebes und dem Drehmoment des Motors. Nach ersten 
 Experimenten kann jedoch davon ausgegangen werden, dass die Frequenz sehr hoch 
 ist.
-
-\clearpage
 
 \input{../doc/risk_c3}
 
