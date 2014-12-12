@@ -137,6 +137,19 @@ Bluetooth sich am besten für diese Übertragung eignet. Nach der Erweiterung
 durch entsprechende Module unterstützt Bluetooth sowohl Mikrocontroller als 
 auch reguläre Computer. Die vorgegebenen Schnittstellen vereinfachen die 
 drahtlose Kommunikation.
+\subsubsection{Befehlsübermittlung an Turm}
+Für die Übertragung der Befehle an den Turm wird ebenfalls Bluetooth verwendet. Nachfolgend ist eine Liste mit möglichen Befehlen zur Steuerung des Turms und einer kurzen Beschreibung zu sehen:
+\begin{itemize}
+		\item \textbf{turnRight(Ticks):} Dreht den Turm die übergebene Anzahl Ticks nach rechts (negative Ticks ergeben eine Drehung nach links).
+		\item \textbf{shoot:} Initiiert den Schuss.
+		\item \textbf{fill:} Wird zum Zurücksetzen des Bandes verwendet.
+		\item \textbf{resetTower:} Dreht den Turm wieder in die neutrale Position zurück, setzt ebenfalls das Band zurück.
+		\item \textbf{statusPosition:} Erfragt die Drehstellung des Turms in Ticks (0 ist bei Endschalter).
+		\item \textbf{statusBat:} Erfragt Akkuspannung (praktisch für Hinweise, ob Akku geladen werden soll oder nicht).
+		\item \textbf{statusShoot:} - Erfragt aktuelle Drehzahl des Rads
+		\item \textbf{statusFeed:} - Erfragt, wo die Position der Ballnachführung ist
+	\end{itemize}
+Die Befehle werden als Strings übermittelt.
 \subsubsection{Bildübermittlung}
 Je höher die Auflösung des vorhandenen Bildes ist, desto genauer kann die 
 Position vom Laptop bestimmt werden. Je höher die Auflösung, desto grösser 
