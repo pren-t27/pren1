@@ -23,8 +23,8 @@ Preislich bewegt sich der Sensor im selben Rahmen wie Ultraschall Module.
     Spannung                    & 4.5 - 5.5V \\
 \end{zebratabular}
 
-\subsubsection{Testeimer}
-Als Testeimer wird der Abfalleimer aus dem Raum C200 verwendet. \\
+\subsubsection{Testkorb}
+Als Testkorb wird der Abfallkorb aus dem Raum C200 verwendet. \\
 \begin{zebratabular}{ll}
     \rowcolor{gray} Eigenschaft & Wert \\
     Durchmesser oben    & 38 cm \\
@@ -104,13 +104,13 @@ Die Wand hinter dem Sensor hat einen Abstand von 2.6 m zum Sensor.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{fig/scope_75.png}
-    \caption{Durchfahren mit Schwarzem Eimer}
+    \caption{Durchfahren mit Schwarzem Korb}
     \label{fig:shift_ir_black}
 \end{figure}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{fig/scope_77.png}
-    \caption{Durchfahren mit Weissem Eimer}
+    \caption{Durchfahren mit Weissem Korb}
     \label{fig:shift_ir_white}
 \end{figure}
 
@@ -124,13 +124,15 @@ weissen Eimer durchgeführt.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{fig/scope_80.png}
-    \caption{Scan mit Schwarzem Eimer}
+    \caption{Scan mit Schwarzem Korb}
     \label{fig:scan_ir_black}
 \end{figure}
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.4\textwidth]{fig/scope_82.png}
-    \caption{Scan mit Weissem Eimer}
+    \caption{Scan mit Weissem Korb}
     \label{fig:scan_ir_white}
 \end{figure}
+\subsubsection{Fazit der Messungen des Infrarotsensors}
+Die ausführlichen Messungen des Infrarotsensors GP2Y0A710K0F führten zum Ergebnis, dass die Korberkennung mittels Infrarot für unser Projekt nicht geeignet ist. Die schwarze Farbe des Korbes bereitet dem Sensor Probleme. Der Korb wird zwar erkannt, doch insbesondere auf den Seiten kann keine genaue Grenze erkannt werden. Die Resultate mit einem weissen Korb waren viel genauer und die Position des Korbes könnte exakter bestimmt werden. Da eine genaue Bestimmung der Position des Korbes für unser Projekt essentiell ist, wird auf die Verwendung eines Infrarotsensors verzichtet.
 
