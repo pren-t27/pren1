@@ -1,11 +1,11 @@
 \newcommand{\tabheader}     % Tabellenkopf
 {
-	\begin{zebratabular}[l]{@{}p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
-		\rowcolor{gray}
-		Anforderung &
-		Pflicht &
-		Wunsch &
-		Verantw. \\
+        \begin{zebratabular}[l]{@{}p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
+            \rowcolor{gray}
+            Anforderung &
+            Pflicht &
+            Wunsch &
+            Verantw. \\
 	}
 \section{Aufgabenstellung}
 \label{sec:aufgabe}
@@ -13,10 +13,13 @@ Es soll ein Gerät entwickelt werden, das Bälle in einen Korb befördern kann.
 Dies soll autonom erfolgen. 
 \begin{figure}[h!]
     \centering
-    \begin{tikzpicture}[scale=0.02]
+    \begin{tikzpicture}[scale=0.02, rotate=90]
+        \def \offset {200}          % Offset between Views of playfield
+        \def \captionxoffset {130}  % Offset of caption in vertical distance
+        \def \captionyoffset {-100} % Offset of caption in horizontal distance
         % playfield frame
         \draw[thick] (0,0) rectangle (150,280);
-        \draw[thick] (295,0) -- (300,0) -- (300,280) -- (295,280);
+        \draw[thick] (\offset-5,0) -- (\offset,0) -- (\offset,280) -- (\offset-5,280);
         % startfield
         \draw[fill=yellow] (0,0) rectangle (150,60);
         % move field
@@ -29,19 +32,28 @@ Dies soll autonom erfolgen.
         \draw[fill=green] (0,210) rectangle (150,240);
         % basket
         \draw[fill=green] (100,225) circle [radius=15];
-        \draw[fill=green] (300,214) -- (340,210) -- (340,240) -- (300,236) -- (300,214);
+        \draw[fill=green] (\offset,214) -- (\offset+40,210) -- 
+            (\offset+40,240) -- (\offset,236) -- (\offset,214);
         % gap filler
         \draw[fill=white] (0,240) rectangle (150,250);
-        \draw[fill=white] (320,250) -- (320,238) -- (330,239) -- (330,250) -- (320,250);
+        \draw[fill=white] (\offset+20,250) -- (\offset+20,238) -- (\offset+30,239) -- (\offset+30,250) -- (\offset+20,250);
         % wall
         \draw[fill=gray] (0,250) rectangle (150,255);
-        \draw[fill=gray] (300,250) rectangle (400,255);
-        \draw[fill=white] (300,255) -- (350,255) -- (300,280) -- (300,255);
+        \draw[fill=gray] (\offset,250) rectangle (\offset+100,255);
+        \draw[fill=white] (\offset,255) -- (\offset+50,255) -- (\offset,280) -- (\offset,255);
         % caption
-        \draw[fill=green]  (450,200) rectangle node[right]{Zielbereich}        (460,210);
-        \draw[fill=red]    (450,180) rectangle node[right]{verbotener Bereich} (460,190);
-        \draw[fill=blue]   (450,160) rectangle node[right]{Bewegungsbereich}   (460,170);
-        \draw[fill=yellow] (450,140) rectangle node[right]{Startbereich}       (460,150);
+        \draw[fill=green]  (\captionxoffset+00,\captionyoffset) 
+            rectangle node[right]{Zielbereich mit Korb}   
+            (\captionxoffset+10,\captionyoffset+10);
+        \draw[fill=red]    (\captionxoffset+20,\captionyoffset) 
+            rectangle node[right]{verbotener Bereich}     
+            (\captionxoffset+30,\captionyoffset+10);
+        \draw[fill=blue]   (\captionxoffset+40,\captionyoffset) 
+            rectangle node[right]{Bewegungsbereich}       
+            (\captionxoffset+50,\captionyoffset+10);
+        \draw[fill=yellow] (\captionxoffset+60,\captionyoffset) 
+            rectangle node[right]{Startbereich}           
+            (\captionxoffset+70,\captionyoffset+10);
     \end{tikzpicture}
     \caption{Spielfeld}
     \label{fig:playfield}
@@ -51,153 +63,185 @@ besprochen. Dazu gehören Anforderungen an das Gerät sowie Rahmenbedingungen.
 In der Spalte Pflicht ist jeweils die Mindestanforderung beschrieben und in 
 der Spalte Wunsch ist die vom Projektteam als Idealfall bezeichnete Leistung 
 eingetragen. Zusätzlich wird eine Spalte Verantwortlichkeit angegeben. Hier
-steht in Kurzform welcher Teilbereich von welcher Abteilung (Informatik, Elektrotechnik, Maschinenbau
-oder Dozenten) im Auge behalten werden muss.
+steht in Kurzform welcher Teilbereich von welcher Abteilung (Informatik, 
+Elektrotechnik, Maschinenbau oder Dozenten) im Auge behalten werden muss.
 \subsection{Gerät}
-\tabheader
-	Abmessungen & 
-	$\leq$ 50 cm x 50 cm x 100 cm &
-	&
-	M \\
-	Gewicht &
-	&
-	$\leq$ 2 kg &
-	M, E \\
-	Startbefehl &
-	drahtlos &
-	drahtlos von Handy &
-	E, I \\
-	Übermittlung Endsignal &
-	An gleiches Gerät wie Startsignal &
-	&
-	E, I \\
-	Aufhängevorrichtung &
-	Kann von Federwaage gewogen werden &
-	&
-	M \\
-	Design &
-	&
-	Optisch ansprechend &
-	M \\
-	Korbfindung &
-	selbständig &
-	&
-	E, I \\
-	Stromversorgung &
-	&
-	Interne Stromversorgung &
-	E \\
-	\end{zebratabular}
+\begin{table}[h!]
+    \centering
+    \begin{zebratabular}[l]{@{}p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
+        \rowcolor{gray} Anforderung &
+            Pflicht &
+            Wunsch &
+            Verantw. \\
+        Abmessungen & 
+            $\leq$ 50 cm x 50 cm x 100 cm &
+            &
+            M \\
+        Gewicht &
+            &
+            $\leq$ 2 kg &
+            M, E \\
+        Startbefehl &
+            drahtlos &
+            drahtlos von Handy &
+            E, I \\
+        Übermittlung Endsignal &
+            An gleiches Gerät wie Startsignal &
+            &
+            E, I \\
+        Aufhängevorrichtung &
+            Kann von Federwaage gewogen werden &
+            &
+            M \\
+        Design &
+            &
+            Optisch ansprechend &
+            M \\
+        Korbfindung &
+            selbständig &
+            &
+            E, I \\
+        Stromversorgung &
+            &
+            Interne Stromversorgung &
+            E \\
+    \end{zebratabular}
+    \caption{Grundanforderungen aus Aufgabenstellung}
+\end{table}
 	
-	\subsection{Randbedingungen}
-	\tabheader
-	Abmessungen Spielfeld &
-	$\geq$ 148 cm x 58 cm &
-	&
-	Doz \\
-	Freie Höhe über Spielfeld &
-	$\geq$ 1.8 m &
-	&
-	Doz \\
-	Freier Raum um Spielfeld &
-	$\geq$ 0.5 m &
-	&
-	Doz \\
-	Distanz Mittellinie bis Korb &
-	75 cm $\ldots$ 1.9 m &
-	&
-	Doz \\
-	Personensicherheit &
-	muss jederzeit gewährleistet sein &
-	&
-	E, I, M \\
-	Sicheres Beenden der Aufgabe &
-	&
-	ohne Beschädigung des Gerätes &
-	I \\
-	Not-Ausschalter &
-	vorhanden &
-	manuelle Steuerung &
-	E, I \\
-	Budget &
-	$\leq$ 600 Fr. &
-	&
-	E, I, M \\
-	Gewicht Tennisball &
-	55 $\ldots$ 59 g &
-	&
-	Doz \\
-	Durchmesser Tennisball &
-	6.3 $\ldots$ 7.3 cm &
-	&
-	Doz \\
-	Durchmesser Korb &
-	30 cm &
-	&
-	Doz \\
-	Höhe Korb &
-	40 cm &
-	&
-	Doz \\
-	Einrichtzeit &
-	$\leq$ 5 min &
-	$\leq$ 2 min &
-	E, I, M \\
-\end{zebratabular}
+\subsection{Randbedingungen}
+\begin{table}[h!]
+    \centering
+    \begin{zebratabular}[l]{@{}p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
+        \rowcolor{gray} Anforderung &
+            Pflicht &
+            Wunsch &
+            Verantw. \\
+        Abmessungen Spielfeld &
+            $\geq$ 148 cm x 58 cm &
+            &
+            Doz \\
+        Freie Höhe über Spielfeld &
+            $\geq$ 1.8 m &
+            &
+            Doz \\
+        Freier Raum um Spielfeld &
+            $\geq$ 0.5 m &
+            &
+            Doz \\
+        Distanz Mittellinie bis Korb &
+            75 cm $\ldots$ 1.9 m &
+            &
+            Doz \\
+        Personensicherheit &
+            muss jederzeit gewährleistet sein &
+            &
+            E, I, M \\
+        Sicheres Beenden der Aufgabe &
+            &
+            ohne Beschädigung des Gerätes &
+            I \\
+        Not-Ausschalter &
+            vorhanden &
+            manuelle Steuerung &
+            E, I \\
+        Budget &
+            $\leq$ 600 Fr. &
+            &
+            E, I, M \\
+        Gewicht Tennisball &
+            55 $\ldots$ 59 g &
+            &
+            Doz \\
+        Durchmesser Tennisball &
+            6.3 $\ldots$ 7.3 cm &
+            &
+            Doz \\
+        Durchmesser Korb &
+            30 cm &
+            &
+            Doz \\
+        Höhe Korb &
+            40 cm &
+            &
+            Doz \\
+        Einrichtzeit &
+            $\leq$ 5 min &
+            $\leq$ 2 min &
+            E, I, M \\
+    \end{zebratabular}
+    \caption{Randbedingungen aus Aufgabenstellung}
+\end{table}
 
+\clearpage
 \subsection{Eigene Anforderungen}
 Es werden noch spezifisch an Flug- beziehungsweise Bodenobjekte eigene 
 Anforderungen gestellt. 
 
 \subsubsection{Flugobjekt}
-\tabheader
-	Dauer zur Erfüllung der Aufgabe &
-	$\leq$3 min &
-	1 min &
-	E, I, M \\
-	Effizienz &
-	5 Bälle im Korb &
-	&
-	E, I, M \\
-	Abfluggewicht &
-	$\leq$2 kg (ohne Bälle) &
-	$\leq$1 kg (ohne Bälle) &
-	E, M \\
-	Funktional &
-	Fokus auf Funktion &
-	&
-	E, I, M \\
-	Design &
-	Leichtbau &
-	Ansprechendes Design &
-	M \\
-	Special-Effects &
-	&
-	Beim Abschlusssignal soll ein Special-Effect ausgelöst werden (Konfetti, Rauch, usw.) &
-	E, I, M \\
-\end{zebratabular}
-
+\begin{table}[h!]
+    \centering
+    \begin{zebratabular}[l]{@{}p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
+        \rowcolor{gray} Anforderung &
+            Pflicht &
+            Wunsch &
+            Verantw. \\
+        Dauer zur Erfüllung der Aufgabe &
+            $\leq$3 min &
+            1 min &
+            E, I, M \\
+        Effizienz &
+            5 Bälle im Korb &
+            &
+            E, I, M \\
+        Abfluggewicht &
+            $\leq$2 kg (ohne Bälle) &
+            $\leq$1 kg (ohne Bälle) &
+            E, M \\
+        Funktional &
+            Fokus auf Funktion &
+            &
+            E, I, M \\
+        Design &
+            Leichtbau &
+            Ansprechendes Design &
+            M \\
+        Special-Effects &
+            &
+            Beim Abschlusssignal soll ein Special-Effect ausgelöst werden (Konfetti, Rauch, usw.) &
+            E, I, M \\
+    \end{zebratabular}
+    \caption{Eigene Anforderungen an ein Flugobjekt}
+\end{table}
 
 \subsubsection{Bodenobjekt}
-\tabheader
-	Dauer zur Erfüllung der Aufgabe &
-	$\leq$3 min &
-	1 min &
-	E, I, M \\
-	Effizienz &
-	min. 3 Bälle im Korb &
-	5 Bälle im Korb &
-	E, I, M \\
-	Gewicht &
-	$\leq$8 kg &
-	$\leq$2 kg &
-	E, M \\
-	Design &
-	Elegantes, spezielles Design &
-	abheben von Konkurrenz &
-	M \\
-	Special-Effects &
-	Das Gerät kann min 1 Special-Effects (Konfetti, Rauch, Sound, usw.) &
-	Das Gerät kann min 3 Special-Effects (Konfetti, Rauch, Sound, usw.) &
-	E, I, M \\
-\end{zebratabular}		
+\begin{table}[h!]
+    \centering
+    \begin{zebratabular}[l]{@{}p{0.3\linewidth}p{0.3\linewidth}p{0.3\linewidth}p{0.06\linewidth}@{}}
+        \rowcolor{gray} Anforderung &
+            Pflicht &
+            Wunsch &
+            Verantw. \\
+        Dauer zur Erfüllung der Aufgabe &
+            $\leq$3 min &
+            1 min &
+            E, I, M \\
+        Effizienz &
+            min. 3 Bälle im Korb &
+            5 Bälle im Korb &
+            E, I, M \\
+        Gewicht &
+            $\leq$8 kg &
+            $\leq$2 kg &
+            E, M \\
+        Design &
+            Elegantes, spezielles Design &
+            abheben von Konkurrenz &
+            M \\
+        Special-Effects &
+            Das Gerät kann min 1 Special-Effects (Konfetti, Rauch, Sound, usw.) &
+            Das Gerät kann min 3 Special-Effects (Konfetti, Rauch, Sound, usw.) &
+            E, I, M \\
+    \end{zebratabular}		
+    \caption{Eigene Anforderungen an ein Bodenobjekt}
+\end{table}
