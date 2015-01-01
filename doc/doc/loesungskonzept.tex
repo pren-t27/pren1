@@ -32,6 +32,7 @@ Bewegung erfolgen.
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
+    \centering
     \begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
     %\begin{zebratabular}{@{}p{0.2\linewidth}llllll}
         \rowcolor{gray}
@@ -80,24 +81,24 @@ Bewegung erfolgen.
             Potenzielle Energie     \tikzmark{1power:height}      &
             Feder                   \tikzmark{1power:spring}      \\
     \end{zebratabular}
+    % Linien zur Darstellung von Lösungsvarianten
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw [ultra thick, rounded corners, red] 
+            ({pic cs:1move:drive}) circle(2pt)
+            --
+            ({pic cs:1ballmove:ball}) circle(2pt)
+            --
+            ({pic cs:1localize:opt}) circle(2pt)
+            --
+            ({pic cs:1store:single}) circle(2pt)
+            --
+            ({pic cs:1connect:radio}) circle(2pt)
+            --
+            ({pic cs:1power:elint}) circle(2pt)
+            ;
+    \end{tikzpicture}
+    \caption{Morphologischer Kasten Bodenobjekt stehend}
 \end{table}
-
-% Linien zur Darstellung von Lösungsvarianten
-\begin{tikzpicture}[remember picture,overlay]
-    \draw [ultra thick, rounded corners, red] 
-        ({pic cs:1move:drive}) circle(2pt)
-        --
-        ({pic cs:1ballmove:ball}) circle(2pt)
-        --
-        ({pic cs:1localize:opt}) circle(2pt)
-        --
-        ({pic cs:1store:single}) circle(2pt)
-        --
-        ({pic cs:1connect:radio}) circle(2pt)
-        --
-        ({pic cs:1power:elint}) circle(2pt)
-        ;
-\end{tikzpicture}
 \normalsize
 
 \subsubsection{Vor- und Nachteile}
@@ -133,6 +134,7 @@ Hierbei handelt es sich um ein fliegendes Objekt, in der Art eines Quadcopters. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
+    \centering
     \begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
     %\begin{zebratabular}{@{}p{0.2\linewidth}llllll}
         \rowcolor{gray}
@@ -181,24 +183,24 @@ Hierbei handelt es sich um ein fliegendes Objekt, in der Art eines Quadcopters. 
             Potenzielle Energie     \tikzmark{2power:height}      &
             Feder                   \tikzmark{2power:spring}      \\
     \end{zebratabular}
+    % Linien zur Darstellung von Lösungsvarianten
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw [ultra thick, rounded corners, red] 
+            ({pic cs:2move:fly}) circle(2pt)
+            --
+            ({pic cs:2ballmove:drop}) circle(2pt)
+            --
+            ({pic cs:2localize:opt}) circle(2pt)
+            --
+            ({pic cs:2store:mult}) circle(2pt)
+            --
+            ({pic cs:2connect:radio}) circle(2pt)
+            --
+            ({pic cs:2power:elint}) circle(2pt)
+            ;
+    \end{tikzpicture}
+    \caption{Morphologischer Kasten Flugobjekt}
 \end{table}
-
-% Linien zur Darstellung von Lösungsvarianten
-\begin{tikzpicture}[remember picture,overlay]
-    \draw [ultra thick, rounded corners, red] 
-        ({pic cs:2move:fly}) circle(2pt)
-        --
-        ({pic cs:2ballmove:drop}) circle(2pt)
-        --
-        ({pic cs:2localize:opt}) circle(2pt)
-        --
-        ({pic cs:2store:mult}) circle(2pt)
-        --
-        ({pic cs:2connect:radio}) circle(2pt)
-        --
-        ({pic cs:2power:elint}) circle(2pt)
-        ;
-\end{tikzpicture}
 \normalsize
 
 \subsubsection{Vor- und Nachteile}
@@ -247,6 +249,7 @@ Hierbei handelt es sich um eine Variante die nicht fahren kann. Die Schussvorric
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
+    \centering
     \begin{zebratabular}{@{}p{0.2\linewidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}p{\morphcellwidth}}
     %\begin{zebratabular}{@{}p{0.2\linewidth}llllll}
         \rowcolor{gray}
@@ -295,24 +298,24 @@ Hierbei handelt es sich um eine Variante die nicht fahren kann. Die Schussvorric
             Potenzielle Energie     \tikzmark{3power:height}      &
             Feder                   \tikzmark{3power:spring}      \\
     \end{zebratabular}
+    % Linien zur Darstellung von Lösungsvarianten
+    \begin{tikzpicture}[remember picture,overlay]
+        \draw [ultra thick, rounded corners, red] 
+            ({pic cs:3move:stay}) circle(2pt)
+            --
+            ({pic cs:3ballmove:ball}) circle(2pt)
+            --
+            ({pic cs:3localize:opt}) circle(2pt)
+            --
+            ({pic cs:3store:single}) circle(2pt)
+            --
+            ({pic cs:3connect:radio}) circle(2pt)
+            --
+            ({pic cs:3power:elext}) circle(2pt)
+            ;
+    \end{tikzpicture}
+    \caption{Morphologischer Kasten Bodenobjekt stehend}
 \end{table}
-
-% Linien zur Darstellung von Lösungsvarianten
-\begin{tikzpicture}[remember picture,overlay]
-    \draw [ultra thick, rounded corners, red] 
-        ({pic cs:3move:stay}) circle(2pt)
-        --
-        ({pic cs:3ballmove:ball}) circle(2pt)
-        --
-        ({pic cs:3localize:opt}) circle(2pt)
-        --
-        ({pic cs:3store:single}) circle(2pt)
-        --
-        ({pic cs:3connect:radio}) circle(2pt)
-        --
-        ({pic cs:3power:elint}) circle(2pt)
-        ;
-\end{tikzpicture}
 \normalsize
 
 \subsubsection{Vor- und Nachteile}
@@ -357,11 +360,12 @@ ist.
     Gewicht:        & Wahrscheinlichkeit unter 2kg zu bleiben \\
     Dauer:          & Zeit, bis Aufgabe erledigt ist \\
     Genauigkeit:    & Wahrscheinlichkeit, dass alle Bälle in Korb landen \\
-    Risikofaktor:   & hoher Faktor entspricht einer weniger hohen Ausfallwahrscheinlichkeit \\
+    Risikofaktor:   & hoher Faktor entspricht einer hohen Zuverlässigkeit \\
     Aufwand:        & Arbeit die investiert werden muss, um das Projekt erfolgreich umzusetzen (höherer Faktor entspricht weniger Aufwand) \\
 \end{tabular}
 
 \begin{table}[h!]
+    \centering
     \begin{zebratabular}{lccc}
         \rowcolor{gray}         & Bodenobjekt fahrend   & Flugobjekt    & Bodenobjekt stehend   \\
         Gewicht                 & 2                     & 10            & 8                     \\
@@ -371,6 +375,7 @@ ist.
         Aufwand                 & 5                     & 4             & 9                     \\
         \rowcolor{gray} Total   & 22                    & 29            & 38                    \\
     \end{zebratabular}
+    \caption{Gegenüberstellung Varianten}
 \end{table}
 
 Die detaillierte Ausarbeitung der einzelnen Lösungskombinationen führt
