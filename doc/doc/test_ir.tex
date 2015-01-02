@@ -117,19 +117,24 @@ Versatz des Eimers gegenüber der Sensorachse abhängig ist.
 
 \subsubsection{Messung Durchfahren eines Objektes}
 Der Eimer wird vor dem Sensor durchgefahren. Anschliessend wird der Eimer mit 
-weissem Papier beklebt. Der Eimer hat dabei eine Distanz von 2 m zum Sensor. 
-Die Wand hinter dem Sensor hat einen Abstand von 2.6 m zum Sensor. 
+weissem Papier beklebt und der Versuch erneut durchgeführt. Der Eimer hat 
+dabei eine Distanz von 2 m zum Sensor.  Die Wand hinter dem Sensor hat einen 
+Abstand von 2.6 m zum Sensor. 
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fig/scope_75.png}
-    \caption{Durchfahren mit Schwarzem Korb}
-    \label{fig:shift_ir_black}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fig/scope_77.png}
-    \caption{Durchfahren mit Weissem Korb}
-    \label{fig:shift_ir_white}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{fig/scope_75.png}
+        \caption*{Schwarzer Korb}
+        \label{fig:shift_ir_black}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{fig/scope_77.png}
+        \caption*{Weisser Korb}
+        \label{fig:shift_ir_white}
+    \end{minipage}
+    \caption{Durchfahren des Korbes}
+    \label{fig:shift_ir}
 \end{figure}
 
 \subsubsection{Messung Scan mit Servomotor}
@@ -140,17 +145,25 @@ Eimer und Sensor beträgt 1.39 m. Die Wand hinter dem Eimer hat eine Distanz
 von 2 m zum Sensor. Auch dieser Versuch wird mit einem schwarzen und mit einem 
 weissen Eimer durchgeführt. 
 \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fig/scope_80.png}
-    \caption{Scan mit Schwarzem Korb}
-    \label{fig:scan_ir_black}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{fig/scope_80.png}
+        \caption{Schwarzer Korb}
+        \label{fig:scan_ir_black}
+    \end{minipage}
+    \begin{minipage}{0.5\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{fig/scope_82.png}
+        \caption{Weisser Korb}
+        \label{fig:scan_ir_white}
+    \end{minipage}
+    \caption{Scan mit Korb}
+    \label{fig:scan_ir}
 \end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{fig/scope_82.png}
-    \caption{Scan mit Weissem Korb}
-    \label{fig:scan_ir_white}
-\end{figure}
-\subsubsection{Fazit der Messungen des Infrarotsensors}
-Die ausführlichen Messungen des Infrarotsensors GP2Y0A710K0F führten zum Ergebnis, dass die Korberkennung mittels Infrarot für unser Projekt nicht geeignet ist. Die schwarze Farbe des Korbes bereitet dem Sensor Probleme. Der Korb wird zwar erkannt, doch insbesondere auf den Seiten kann keine genaue Grenze erkannt werden. Die Resultate mit einem weissen Korb waren viel genauer und die Position des Korbes könnte exakter bestimmt werden. Da eine genaue Bestimmung der Position des Korbes für unser Projekt essentiell ist, wird auf die Verwendung eines Infrarotsensors verzichtet.
+
+\subsubsection{Fazit}
+Der Sensor ist nicht geeignet, um den Korb zu finden. Aufgrund der schwarzen 
+Farbe und der runden Form wird der Korb nur in der Mitte erkannt. An den 
+Rändern ist die Reflektion in Richtung Sensor zu schwach um den Korb erkennen 
+zu können. 
 
