@@ -1,13 +1,86 @@
 \section{Benötigte Funktionen}
 Aus der Aufgabenstellung können nun die für das Lösen der Aufgabe benötigten 
-Funktionen extrahiert werden. Als Erstes muss das Startsignal drahtlos 
-übermittelt werden. Danach muss der Korb gefunden werden. Anschliessend müssen 
-die Bälle in den Korb befördert werden. Zum Schluss muss das Beenden der 
-Aufgabe erneut drahtlos übermittelt und angezeigt werden. Also ergeben sich 
-folgende benötigte Funktionen: 
+Funktionen extrahiert werden. Vor dem Start müssen die Bälle in einem Ballager 
+aufgenommen werden. Als Erstes muss das Startsignal drahtlos übermittelt 
+werden. Danach muss der Korb gefunden und angepeilt werden. Anschliessend 
+müssen die Bälle in den Korb befördert werden. Ausserdem muss das Gerät mit 
+Energie versorgt werden. Also ergeben sich folgende benötigte Funktionen: 
 \begin{itemize}
+    \item Anpeilen des Korbes
+    \item Ballbeförderung
+    \item Korberkennung
+    \item Balllager
     \item Drahtlose Übermittlung des Startsignals
-    \item Erkennung der Position des Korbes
-    \item Beförderung der Bälle
-    \item Übertragung und Anzeige der Fertigstellung der Aufgabe
+    \item Energieversorgung
 \end{itemize}
+
+\subsection{Anpeilen des Korbes}
+\begin{itemize}
+    \item Fliegend \\
+        Das Gerät fliegt zum Korb. 
+    \item Fahrend \\
+        Das Gerät wird fahrend vor den Korb verschoben. 
+    \item Stehend \\
+        Das Gerät wird um die eigene Achse rotierend zum Korb ausgerichtet. 
+\end{itemize}
+
+\subsection{Ballbeförderung}
+\begin{itemize}
+    \item Ballistisch \\
+        Der Ball wird geworfen und fliegt auf einer ballistischen Flugbahn zum 
+        Korb. 
+    \item Abwurf \\
+        Der Ball wird von über dem Korb abgeworfen. 
+\end{itemize}
+
+\subsection{Korberkennung}
+\begin{itemize}
+    \item Distanzmessung \\
+        Die Distanz zur Wand wird gemessen. Dabei wird die gesamte Breite 
+        gescant. An der Stelle mit der geringsten Distanz ist der Korb 
+        positioniert. 
+    \item Optische Erkennung \\
+        Das Spielfeld wird mit einer Kamera aufgezeichnet. Mittels 
+        Bildverarbeitung wird der Korb erkannt und dessen Position ermittelt. 
+\end{itemize}
+
+\subsection{Balllager}
+\begin{itemize}
+    \item Einzeln \\
+        Die Bälle werden einzeln gelagert und befördert. 
+    \item Zusammen \\
+        Die Bälle werden als eine Einheit gelagert und befördert. 
+\end{itemize}
+
+\subsection{Drahtlose Übermittlung des Startsignals}
+\begin{itemize}
+    \item Funk \\
+        Die Kommunikation erfolgt via elektromagnetischer Wellen. 
+    \item Optisch \\
+        Die Kommunikation erfolgt via Licht. 
+    \item Ultraschall \\
+        Die Kommunikation erfolgt via Schallwellen im Ultraschallbereich 
+        (> 20 kHz). 
+    \item Spracherkennung \\
+        Das Startsignal wird von einer Person ausgesprochen und vom Gerät 
+        mittels Spracherkennung decodiert. 
+\end{itemize}
+
+\subsection{Energieversorgung}
+\begin{itemize}
+    \item intern elektrisch \\
+        Das Gerät wird durch einen elektrochemischen Energiespeicher 
+        angetrieben. 
+    \item extern elektrisch \\
+        Das Gerät wird von einem Speisegerät mit Energie versorgt. 
+    \item Verbrennungsmotor \\
+        Das Gerät wird von einem Verbrennungsmotor angetrieben. 
+    \item Druckluft \\
+        Die Bälle werden pneumatisch befördert. 
+    \item Potenzielle Energie \\
+        Die Bälle werden nur mittels der in ihnen gespeicherten Energie 
+        befördert. 
+    \item Feder \\
+        Die Bälle werden von einer Feder beschleunigt. 
+\end{itemize}
+
