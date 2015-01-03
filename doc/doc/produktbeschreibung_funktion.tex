@@ -133,19 +133,36 @@ eingesetzt werden. Für die Übertragung des Bildes ist allerdings ein
 Das Startsignal wird drahtlos vom Laptop auf den Roboter übertragen. Nachdem 
 dieser die Aufgabe ausgeführt hat, sendet er wiederum drahtlos das Endsignal 
 an den Laptop. Aufgrund der Technologierecherche wird entschieden, dass 
-Bluetooth sich am besten für diese Übertragung eignet. Im Vergleich mit Infrarot und USB konnte sich Bluetooth durchsetzen, da es durch entsprechende Module sowohl Mikrocontroller als 
-auch reguläre Computer unterstützt. Die vorgegebenen Schnittstellen vereinfachen die drahtlose Kommunikation.
+Bluetooth sich am besten für diese Übertragung eignet. Im Vergleich mit 
+Infrarot und USB konnte sich Bluetooth durchsetzen, da es durch entsprechende 
+Module sowohl Mikrocontroller als 
+auch reguläre Computer unterstützt. Die vorgegebenen Schnittstellen 
+vereinfachen die drahtlose Kommunikation.
 \subsubsection{Befehlsübermittlung an Turm}
-Für die Übertragung der Befehle an den Turm wird ebenfalls Bluetooth verwendet. Nachfolgend ist eine Liste mit möglichen Befehlen zur Steuerung des Turms und einer kurzen Beschreibung zu sehen:
+Für die Übertragung der Befehle an den Turm wird ebenfalls Bluetooth 
+verwendet. Nachfolgend ist eine Liste mit möglichen Befehlen zur Steuerung des 
+Turms und einer kurzen Beschreibung zu sehen:
 \begin{itemize}
-		\item \textbf{turnRight(Ticks):} Dreht den Turm die übergebene Anzahl Ticks nach rechts (negative Ticks ergeben eine Drehung nach links).
-		\item \textbf{shoot:} Initiiert den Schuss.
-		\item \textbf{fill:} Bringt das Beförderungsband zurück in die Ausgangsposition.
-		\item \textbf{resetTower:} Dreht den Turm in die neutrale Position zurück und bringt das Beförderungsband in die Ausgangsposition.
-		\item \textbf{statusPosition:} Erfragt die Drehstellung des Turms in Ticks (0 ist bei Endschalter).
-		\item \textbf{statusBat:} Erfragt Akkuspannung (praktisch für Hinweise, ob Akku geladen werden soll oder nicht).
-		\item \textbf{statusShoot:} - Erfragt aktuelle Drehzahl des Rads
-		\item \textbf{statusFeed:} - Erfragt, wo die Position der Ballnachführung ist
+		\item \verb?turnRight(Ticks)?:  \\
+            Dreht den Turm die übergebene Anzahl Ticks nach rechts (negative 
+            Ticks ergeben eine Drehung nach links).
+		\item \verb?shoot?: \\
+            Initiiert den Schuss.
+		\item \verb?fill?: \\
+            Bringt das Beförderungsband zurück in die Ausgangsposition.
+		\item \verb?resetTower?: \\
+            Dreht den Turm in die neutrale Position zurück und bringt das 
+            Beförderungsband in die Ausgangsposition.
+		\item \verb?statusPosition?: \\
+            Erfragt die Drehstellung des Turms in Ticks (0 ist bei 
+            Endschalter, positive Richtung nach rechts).
+		\item \verb?statusBat?: \\
+            Erfragt Akkuspannung (praktisch für Hinweise, ob Akku geladen 
+            werden soll oder nicht).
+		\item \verb?statusShoot?: \\
+            Erfragt aktuelle Drehzahl des Rads
+		\item \verb?statusFeed?: \\
+            Erfragt, wo die Position der Ballnachführung ist
 	\end{itemize}
 Die Befehle werden als Strings übermittelt.
 \subsubsection{Bildübermittlung}
