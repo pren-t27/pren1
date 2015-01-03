@@ -1,7 +1,30 @@
 \subsection{Ultraschallsensor HC-SR04}
 Diese Messung wird gemeinsam mit Gruppe 39 durchgeführt. \\
 Ein sehr verbreitetes Modul für die Distanzmessung mittels Ultraschall ist 
-das Modul HC-SR04. Mit diesem werden Messungen durchgeführt, um festzustellen, 
+das Modul HC-SR04. Dieses misst Distanzen mittels der Laufzeit von Schall. 
+Dazu wird ein Ultraschall Impuls ausgesendet. Dieser wird von einem Objekt in 
+der Umgebung reflektiert. Die Reflektion wird mit einem Ultraschallempfänger 
+aufgefangen und in ein digitales Signal umgewandelt. 
+\begin{figure}[h!]
+    \center
+    \begin{tikztimingtable}
+        Trigger     & L0.25C10C\\
+        Ultraschall & 1.25L16{0.25c}5L;[gray]16{0.25c};L\\
+        Echo        & 3.25L7CC\\
+    \end{tikztimingtable}
+    \label{tim_dist}
+    \caption{Zeitdiagramm der Ansteuerung des Ultraschallsensors HC-SR04}
+\end{figure}
+Aufgrund der Länge dieses 
+digitalen Signals und der Schallgeschwindigkeit kann nund die Distanz des 
+Objekts bestimmt werden. 
+\[ D = \frac{T \cdot c_{Luft}}{2} \]
+\begin{tabular}{@{}ll}
+    $D$         & Distanz \\
+    $T$         & Pulsweite des Signals \\
+    $c_{Luft}$  & Schallgeschwindigkeit in Luft \\
+\end{tabular} \\
+Mit diesem Sensor werden Messungen durchgeführt, um festzustellen, 
 ob es geeignet ist, einen Eimer zu detektieren. 
 
 \subsubsection{Messmittel}
