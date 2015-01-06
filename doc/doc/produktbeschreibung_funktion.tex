@@ -91,10 +91,10 @@ Bei der Bildverarbeitung ist zu beachten, dass sie sehr rechen- wie auch
 speicherintensiv ist. Um eine Analyse eines Bildes durchzuführen sind diverse 
 mathematische Funktionen wie auch farbanalytische Schritte nötig. Je schneller 
 die Berechnung ausgeführt werden soll, desto grössere Rechenleistung wird 
-benötigt. Deshalb wird entschieden, die Bildverarbeitung auf ein Notebook 
+benötigt. Deshalb wird entschieden, die Bildverarbeitung auf ein Laptop 
 auszulagern. Dieses solle neben genügend Speicher auch ausreichend 
 Rechenleistung zur Verfügung stellen können. Da sämtliche Studierende bereits 
-über ein Notebook verfügen, vereinfacht sich die gemeinsame Entwicklung auf 
+über ein Laptop verfügen, vereinfacht sich die gemeinsame Entwicklung auf 
 dem Endgerät.
 
 \subsubsection{Software}
@@ -158,8 +158,8 @@ Turms und einer kurzen Beschreibung zu sehen:
             Erfragt die Drehstellung des Turms in Ticks (0 ist bei 
             Endschalter, positive Richtung nach rechts). 
 		\item \verb?statusBat? \\
-            Erfragt die Akkuspannung (praktisch für Hinweise, ob Akku geladen 
-            werden soll oder nicht). 
+            Erfragt die Akkuspannung (praktisch für Hinweise, ob der Akku 
+            geladen werden soll oder nicht). 
 		\item \verb?statusShoot? \\
             Erfragt die aktuelle Drehzahl des Rads. 
 		\item \verb?statusFeed? \\
@@ -168,14 +168,14 @@ Turms und einer kurzen Beschreibung zu sehen:
 Die Befehle werden als Strings übermittelt.
 \subsubsection{Bildübermittlung}
 Je höher die Auflösung des vorhandenen Bildes ist, desto genauer kann die 
-Position vom Laptop bestimmt werden. Je höher die Auflösung, desto grösser 
-wird die Bilddatei, die zum Laptop übermittelt werden muss. Am naheliegendsten 
-wäre die Verwendung von Bluetooth gewesen. Doch aufgrund von ungenügender 
-Bandbreite muss auf einen anderen Übermittlungsstandard zurückgegriffen 
-werden. Die Bildübertragung kann unabhängig vom Mikrocontroller geschehen. So 
-kann sich dieser alleine auf die Abarbeitung des Schiessvorgangs 
-konzentrieren. Das Bild wird separat entweder direkt von einer Kamera oder von 
-einem weiteren Mikrocontroller übermittelt. Um diese Übermittlung 
-durchzuführen wird WLAN ausgewählt. Dies vor allem, weil WLAN ein sehr 
-verbreiteter Standard ist und fast von allen Geräten unterstützt wird. Zudem 
-können im Handel preisgünstig WLAN-fähige Kameras erworben werden.
+Position des Korbes vom Laptop bestimmt werden. Je höher die Auflösung, desto 
+grösser wird die Bilddatei, die zum Laptop übermittelt werden muss. Am 
+naheliegendsten wäre die Verwendung von Bluetooth gewesen. Doch aufgrund von 
+ungenügender Bandbreite muss auf einen anderen Übermittlungsstandard 
+zurückgegriffen werden. Die Bildübertragung kann unabhängig vom 
+Mikrocontroller geschehen. So kann sich dieser alleine auf die Abarbeitung des 
+Schiessvorgangs konzentrieren. Das Bild wird separat entweder direkt von einer 
+Kamera oder von einem weiteren Mikrocontroller übermittelt. Um diese 
+Übermittlung durchzuführen wird WLAN ausgewählt. Dies vor allem, weil WLAN ein 
+sehr verbreiteter Standard ist und fast von allen Geräten unterstützt wird. 
+Zudem können im Handel preisgünstig WLAN-fähige Kameras erworben werden.
