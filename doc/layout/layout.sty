@@ -167,10 +167,13 @@
     \@ifclassloaded{article}{
         % TODO: Define all dimensions below!!!
         % \addtolength{\textheight}{3.5cm}
-        % \addtolength{\voffset}{-1.5cm}
-        % \addtolength{\textwidth}{1cm}
-        % \addtolength{\evensidemargin}{-15mm}
-        % \addtolength{\oddsidemargin}{5mm}
+        \addtolength{\voffset}{-2.5cm}
+        \addtolength{\textwidth}{5cm}
+        \addtolength{\textheight}{1cm}
+        \addtolength{\evensidemargin}{-25mm}
+        \addtolength{\oddsidemargin}{-25mm}
+        % \addtolength{\headwidth}{5cm}
+        \addtolength{\headheight}{2.5cm}
 
         % \addtolength{\textheight}{\topmargin-\evensidemargin-\hoffset+\voffset}
         % \setlength{\topmargin}{\evensidemargin+\hoffset-\voffset}
@@ -203,12 +206,12 @@
     % Kopf- und Fusszeile für Artikel
     \makeatletter       % @ Teil des Befehls
     \@ifclassloaded{article}{
-        \fancyhead[L]{}                             % Kopfzeile links
-        \fancyhead[C]{}                             % zentrierte Kopfzeile
-        \fancyhead[R]{}                             % Kopfzeile rechts
+        \fancyhead[L]{\textbf{PREN1}}               % Kopfeile links
+        \fancyhead[C]{Hochschule Luzern - Technik \& Architektur}  % zentrierte Kopfzeile
+        \fancyhead[R]{Team 27}                      % Kopfzeile rechts
         %
         \fancyfoot[L]{}                             % Fusszeile links
-        \fancyfoot[C]{}                             % Fusszeile zentriert
+        \fancyfoot[C]{\today}                       % Fusszeile zentriert
         \fancyfoot[R]{\thepage}                     % Fusszeile rechts
         %
         \renewcommand{\headrulewidth}{0.4pt}        % obere Trennlinie
