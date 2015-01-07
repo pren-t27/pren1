@@ -28,6 +28,16 @@ Bei diesem Konzept soll die Abschussvorrichtung fahrend sein. Hierbei kann
 die  Wurfdistanz zum Ziel verringert werden und auch das Zielen mittels 
 Bewegung erfolgen.
 
+\subsubsection{Funktionsweise}
+Eine fahrende Lösung wäre durch das anfängliche Ausrichten des Geräts und 
+den anschliessenden Wurf ein technisch anspruchsvoller und interessanter 
+Ansatz. Jedoch wird gerade aufgrund dieser Punkte das Erreichen der 
+Projektziele erschwert. Das Fahren benötigt im Vergleich zu einem direkten 
+Wurf, welcher durch die kurze Distanz gut realisierbar ist, viel Zeit. Auch 
+wird die Konstruktion durch die Fortbewegung komplizierter und somit 
+teurer und schwerer. Durch die klare Aufgabenstellung ist eine 
+universellere Nutzung mit eventuellen Erweiterungsmöglichkeiten nicht nötig. 
+
 \subsubsection{Morphologischer Kasten}
 % Morphologischer Kasten mit Stichworten
 \footnotesize
@@ -39,47 +49,47 @@ Bewegung erfolgen.
         Eigenschaften &
             \multicolumn{6}{c}{Merkmalausprägung} \\
         Art der Bewegung &
-            Fliegend                \tikzmark{1move:fly}          &
-            Fahrend                 \tikzmark{1move:drive}        &
-            Stehend                 \tikzmark{1move:stay}         &
-                                    \tikzmark{1move:none3}        &
-                                    \tikzmark{1move:none2}        &
-                                    \tikzmark{1move:none1}        \\
+            Fliegend                    \tikzmark{1move:fly}          &
+            Fahrend                     \tikzmark{1move:drive}        &
+            Stehend                     \tikzmark{1move:stay}         &
+                                        \tikzmark{1move:none3}        &
+                                        \tikzmark{1move:none2}        &
+                                        \tikzmark{1move:none1}        \\
         Ballbeförderung &
-            Ballistisch             \tikzmark{1ballmove:ball}     &
-            Abwurf                  \tikzmark{1ballmove:drop}     &
-                                    \tikzmark{1ballmove:none4}    &
-                                    \tikzmark{1ballmove:none3}    &
-                                    \tikzmark{1ballmove:none2}    &
-                                    \tikzmark{1ballmove:none1}    \\
+            Ballistisch                 \tikzmark{1ballmove:ball}     &
+            Abwurf                      \tikzmark{1ballmove:drop}     &
+                                        \tikzmark{1ballmove:none4}    &
+                                        \tikzmark{1ballmove:none3}    &
+                                        \tikzmark{1ballmove:none2}    &
+                                        \tikzmark{1ballmove:none1}    \\
         Erkennen des Korbes &
-            Distanzmessung          \tikzmark{1localize:dist}     &
-            Optische Erkennung      \tikzmark{1localize:opt}      &
-                                    \tikzmark{1localize:none4}    &
-                                    \tikzmark{1localize:none3}    &
-                                    \tikzmark{1localize:none2}    &
-                                    \tikzmark{1localize:none1}    \\
+            Distanzmessung              \tikzmark{1localize:dist}     &
+            Optische Erkennung          \tikzmark{1localize:opt}      &
+                                        \tikzmark{1localize:none4}    &
+                                        \tikzmark{1localize:none3}    &
+                                        \tikzmark{1localize:none2}    &
+                                        \tikzmark{1localize:none1}    \\
         Balllager &
-            Einzeln                 \tikzmark{1store:single}      &
-            Zusammen                \tikzmark{1store:mult}        &
-                                    \tikzmark{1store:none4}       &
-                                    \tikzmark{1store:none4}       &
-                                    \tikzmark{1store:none4}       &
-                                    \tikzmark{1store:none1}       \\
+            Einzeln                     \tikzmark{1store:single}      &
+            Zusammen                    \tikzmark{1store:mult}        &
+                                        \tikzmark{1store:none4}       &
+                                        \tikzmark{1store:none4}       &
+                                        \tikzmark{1store:none4}       &
+                                        \tikzmark{1store:none1}       \\
         Übertragung Startsignal &
-            Funk                    \tikzmark{1connect:radio}     &
-            Optisch                 \tikzmark{1connect:opt}       &
-            Ultraschall             \tikzmark{1connect:us}        &
-            Spracherkennung         \tikzmark{1connect:voice}     &
-                                    \tikzmark{1connect:none2}     &
-                                    \tikzmark{1connect:none1}     \\
+            Funk                        \tikzmark{1connect:radio}     &
+            Optisch                     \tikzmark{1connect:opt}       &
+            Ultraschall                 \tikzmark{1connect:us}        &
+            Sprach\-erkennung           \tikzmark{1connect:voice}     &
+                                        \tikzmark{1connect:none2}     &
+                                        \tikzmark{1connect:none1}     \\
         Energieversorgung &
-            intern elektrisch       \tikzmark{1power:elint}       &
-            extern elektrisch       \tikzmark{1power:elext}       &
-            Verbrennungsmotor       \tikzmark{1power:combustion}  &
-            Druckluft               \tikzmark{1power:air}         &
-            Potenzielle Energie     \tikzmark{1power:height}      &
-            Feder                   \tikzmark{1power:spring}      \\
+            intern elektrisch           \tikzmark{1power:elint}       &
+            extern elektrisch           \tikzmark{1power:elext}       &
+            Ver\-bren\-nungs\-mo\-tor   \tikzmark{1power:combustion}  &
+            Druckluft                   \tikzmark{1power:air}         &
+            Potenzielle Energie         \tikzmark{1power:height}      &
+            Feder                       \tikzmark{1power:spring}      \\
     \end{zebratabular}
     % Linien zur Darstellung von Lösungsvarianten
     \begin{tikzpicture}[remember picture,overlay]
@@ -112,16 +122,6 @@ Bewegung erfolgen.
     \end{itemize}
 \end{minipage}
 
-\subsubsection{Funktionsweise}
-Eine fahrende Lösung wäre durch das anfängliche Ausrichten des Geräts und 
-den anschliessenden Wurf ein technisch anspruchsvoller und interessanter 
-Ansatz. Jedoch wird gerade aufgrund dieser Punkte das Erreichen der 
-Projektziele erschwert. Das Fahren benötigt im Vergleich zu einem direkten 
-Wurf, welcher durch die kurze Distanz gut realisierbar ist, viel Zeit. Auch 
-wird die Konstruktion durch die Fortbewegung komplizierter und somit 
-teurer und schwerer. Durch die klare Aufgabenstellung ist eine 
-universellere Nutzung mit eventuellen Erweiterungsmöglichkeiten nicht nötig. 
-
 \input{../doc/risk_c1}
 
 \clearpage
@@ -129,6 +129,29 @@ universellere Nutzung mit eventuellen Erweiterungsmöglichkeiten nicht nötig.
 \subsection{Variante Flugobjekt}
 \subsubsection{Kurzbeschrieb}
 Hierbei handelt es sich um ein fliegendes Objekt, in der Art eines Quadrocopters. Die Bälle werden alle gleichzeitig vom Quadrocopter abgeworfen.
+
+\subsubsection{Funktionsweise}
+Mit einem fliegenden Objekt kann die Aufgabe vom Prinzip her relativ zielstrebig bewältigt 
+werden. Allerdings wird es schwierig, eine gut funktionierende Regelung zu entwickeln um das 
+Flugobjekt ruhig in der Luft zu halten, die gewünschte Position genau 
+anzufliegen und ein Wegdriften zu vermeiden. 
+Vom Startpunkt aus bewegt sich das Objekt in der Luft, erkennt den Korb optisch 
+mit einer Kamera und fliegt anschliessend über diesen und wirft dort die Bälle 
+ab. Die Bälle müssten nicht einzeln abgeworfen werden, sie könnten alle zusammen 
+in einem entsprechenden Behälter transportiert und abgeworfen 
+werden. Sollte der Korb korrekt erkannt worden sein und das Flugobjekt sich 
+richtig über ihn bewegt haben, kann eine hundertprozentige Erfolgsquote 
+erreicht werden. Sollte jedoch nur eine dieser Bedingungen nicht erfüllt werden, verfehlen  
+automatisch sämtliche Bälle das Ziel und die Aufgabe wird nicht erfüllt. 
+Bezüglich des Gewichts hat ein Flugobjekt grosse Vorteile. Da das Eigengewicht 
+sowieso tief gehalten werden muss, wird es einfach sein, das Gesamtgewicht 
+unter zwei Kilogramm zu halten.
+%
+Zudem muss beachtet werden, dass ein Flugobjekt eine gewisse Zeit 
+braucht, um den Korb zu erkennen und sich anschliessend auch passend darüber 
+zu positionieren. Am meisten gegen ein Flugobjekt spricht jedoch die 
+Risikoanalyse: Es gibt sehr viele Faktoren, welche kontrolliert und überwacht 
+werden müssen. Dies ist sowohl zeit- als auch rechenintensiv. 
 
 \subsubsection{Morphologischer Kasten}
 % Morphologischer Kasten mit Stichworten
@@ -141,47 +164,47 @@ Hierbei handelt es sich um ein fliegendes Objekt, in der Art eines Quadrocopters
         Eigenschaften &
             \multicolumn{6}{c}{Merkmalausprägung} \\
         Art der Bewegung &
-            Fliegend                \tikzmark{2move:fly}          &
-            Fahrend                 \tikzmark{2move:drive}        &
-            Stehend                 \tikzmark{2move:stay}         &
-                                    \tikzmark{2move:none3}        &
-                                    \tikzmark{2move:none2}        &
-                                    \tikzmark{2move:none1}        \\
+            Fliegend                    \tikzmark{2move:fly}          &
+            Fahrend                     \tikzmark{2move:drive}        &
+            Stehend                     \tikzmark{2move:stay}         &
+                                        \tikzmark{2move:none3}        &
+                                        \tikzmark{2move:none2}        &
+                                        \tikzmark{2move:none1}        \\
         Ballbeförderung &
-            Ballistisch             \tikzmark{2ballmove:ball}     &
-            Abwurf                  \tikzmark{2ballmove:drop}     &
-                                    \tikzmark{2ballmove:none4}    &
-                                    \tikzmark{2ballmove:none3}    &
-                                    \tikzmark{2ballmove:none2}    &
-                                    \tikzmark{2ballmove:none1}    \\
+            Ballistisch                 \tikzmark{2ballmove:ball}     &
+            Abwurf                      \tikzmark{2ballmove:drop}     &
+                                        \tikzmark{2ballmove:none4}    &
+                                        \tikzmark{2ballmove:none3}    &
+                                        \tikzmark{2ballmove:none2}    &
+                                        \tikzmark{2ballmove:none1}    \\
         Erkennen des Korbes &
-            Distanzmessung          \tikzmark{2localize:dist}     &
-            Optische Erkennung      \tikzmark{2localize:opt}      &
-                                    \tikzmark{2localize:none4}    &
-                                    \tikzmark{2localize:none3}    &
-                                    \tikzmark{2localize:none2}    &
-                                    \tikzmark{2localize:none1}    \\
+            Distanzmessung              \tikzmark{2localize:dist}     &
+            Optische Erkennung          \tikzmark{2localize:opt}      &
+                                        \tikzmark{2localize:none4}    &
+                                        \tikzmark{2localize:none3}    &
+                                        \tikzmark{2localize:none2}    &
+                                        \tikzmark{2localize:none1}    \\
         Balllager &
-            Einzeln                 \tikzmark{2store:single}      &
-            Zusammen                \tikzmark{2store:mult}        &
-                                    \tikzmark{2store:none4}       &
-                                    \tikzmark{2store:none4}       &
-                                    \tikzmark{2store:none4}       &
-                                    \tikzmark{2store:none1}       \\
+            Einzeln                     \tikzmark{2store:single}      &
+            Zusammen                    \tikzmark{2store:mult}        &
+                                        \tikzmark{2store:none4}       &
+                                        \tikzmark{2store:none4}       &
+                                        \tikzmark{2store:none4}       &
+                                        \tikzmark{2store:none1}       \\
         Übertragung Startsignal &
-            Funk                    \tikzmark{2connect:radio}     &
-            Optisch                 \tikzmark{2connect:opt}       &
-            Ultraschall             \tikzmark{2connect:us}        &
-            Spracherkennung         \tikzmark{2connect:voice}     &
-                                    \tikzmark{2connect:none2}     &
-                                    \tikzmark{2connect:none1}     \\
+            Funk                        \tikzmark{2connect:radio}     &
+            Optisch                     \tikzmark{2connect:opt}       &
+            Ultraschall                 \tikzmark{2connect:us}        &
+            Sprach\-erkennung           \tikzmark{2connect:voice}     &
+                                        \tikzmark{2connect:none2}     &
+                                        \tikzmark{2connect:none1}     \\
         Energieversorgung &
-            intern elektrisch       \tikzmark{2power:elint}       &
-            extern elektrisch       \tikzmark{2power:elext}       &
-            Verbrennungsmotor       \tikzmark{2power:combustion}  &
-            Druckluft               \tikzmark{2power:air}         &
-            Potenzielle Energie     \tikzmark{2power:height}      &
-            Feder                   \tikzmark{2power:spring}      \\
+            intern elektrisch           \tikzmark{2power:elint}       &
+            extern elektrisch           \tikzmark{2power:elext}       &
+            Ver\-bren\-nungs\-mo\-tor   \tikzmark{2power:combustion}  &
+            Druckluft                   \tikzmark{2power:air}         &
+            Potenzielle Energie         \tikzmark{2power:height}      &
+            Feder                       \tikzmark{2power:spring}      \\
     \end{zebratabular}
     % Linien zur Darstellung von Lösungsvarianten
     \begin{tikzpicture}[remember picture,overlay]
@@ -214,29 +237,6 @@ Hierbei handelt es sich um ein fliegendes Objekt, in der Art eines Quadrocopters
     \end{itemize}
 \end{minipage}
 
-\subsubsection{Funktionsweise}
-Mit einem fliegenden Objekt kann die Aufgabe vom Prinzip her relativ zielstrebig bewältigt 
-werden. Allerdings wird es schwierig, eine gut funktionierende Regelung zu entwickeln um das 
-Flugobjekt ruhig in der Luft zu halten, die gewünschte Position genau 
-anzufliegen und ein Wegdriften zu vermeiden. 
-Vom Startpunkt aus bewegt sich das Objekt in der Luft, erkennt den Korb optisch 
-mit einer Kamera und fliegt anschliessend über diesen und wirft dort die Bälle 
-ab. Die Bälle müssten nicht einzeln abgeworfen werden, sie könnten alle zusammen 
-in einem entsprechenden Behälter transportiert und abgeworfen 
-werden. Sollte der Korb korrekt erkannt worden sein und das Flugobjekt sich 
-richtig über ihn bewegt haben, kann eine hundertprozentige Erfolgsquote 
-erreicht werden. Sollte jedoch nur eine dieser Bedingungen nicht erfüllt werden, verfehlen  
-automatisch sämtliche Bälle das Ziel und die Aufgabe wird nicht erfüllt. 
-Bezüglich des Gewichts hat ein Flugobjekt grosse Vorteile. Da das Eigengewicht 
-sowieso tief gehalten werden muss, wird es einfach sein, das Gesamtgewicht 
-unter zwei Kilogramm zu halten.
-%
-Zudem muss beachtet werden, dass ein Flugobjekt eine gewisse Zeit 
-braucht, um den Korb zu erkennen und sich anschliessend auch passend darüber 
-zu positionieren. Am meisten gegen ein Flugobjekt spricht jedoch die 
-Risikoanalyse: Es gibt sehr viele Faktoren, welche kontrolliert und überwacht 
-werden müssen. Dies ist sowohl zeit- als auch rechenintensiv. 
-
 \input{../doc/risk_c2}
 
 \clearpage
@@ -245,6 +245,26 @@ werden müssen. Dies ist sowohl zeit- als auch rechenintensiv.
 \label{sec:var_bod_ste}
 \subsubsection{Kurzbeschrieb}
 Hierbei handelt es sich um eine Variante die nicht fahren kann. Die Schussvorrichtung ist drehbar.
+
+\subsubsection{Funktionsweise}
+Dieses Gerät lokalisiert den Korb mit optischen Sensoren und richtet die 
+Schussvorrichtung danach aus. Der Abschusswinkel bleibt fix, die Richtung und 
+Schussweite können eingestellt werden. Die Bälle werden mit einem 
+ballistischen Mechanismus abgeschossen. Angenommen, das Gerät wird im Startfeld 
+mittig an der Startlinie positioniert, und der Korb wird ganz am Rand des 
+Feldes positioniert, ergibt sich für die maximale Wurflänge 1992.49mm. Die 
+minimale Wurflänge (Korb wird mittig positioniert) beträgt 1900mm. Da der Korb 
+einen Durchmesser von 30cm hat, könnte somit immer gleich weit geschossen 
+werden, vorausgesetzt die Schussweitentoleranz beträgt weniger als ±10cm 
+(siehe Kapitel "'Berechnungen"'). Dies ist deshalb auch die grösste 
+Schwierigkeit bei dieser Variante. Da nur eine drehbare Schussvorrichtung nötig 
+ist, wird die Mechanik stark vereinfacht. Dadurch kann der Fokus auf den 
+Leichtbau gelegt werden, so dass das Projektziel, das Gewicht unter 2kg zu 
+halten, erreicht werden sollte. Die Bälle werden nacheinander geschossen. Wie 
+schnell dies passieren kann, ist abhängig von der Konstruktion und von der 
+Massenträgheit des Antriebes und dem Drehmoment des Motors. Nach ersten 
+Experimenten kann jedoch davon ausgegangen werden, dass die Frequenz sehr hoch 
+ist.
 
 \subsubsection{Morphologischer Kasten}
 % Morphologischer Kasten mit Stichworten
@@ -257,47 +277,47 @@ Hierbei handelt es sich um eine Variante die nicht fahren kann. Die Schussvorric
         Eigenschaften &
             \multicolumn{6}{c}{Merkmalausprägung} \\
         Art der Bewegung &
-            Fliegend                \tikzmark{3move:fly}          &
-            Fahrend                 \tikzmark{3move:drive}        &
-            Stehend                 \tikzmark{3move:stay}         &
-                                    \tikzmark{3move:none3}        &
-                                    \tikzmark{3move:none2}        &
-                                    \tikzmark{3move:none1}        \\
+            Fliegend                    \tikzmark{3move:fly}          &
+            Fahrend                     \tikzmark{3move:drive}        &
+            Stehend                     \tikzmark{3move:stay}         &
+                                        \tikzmark{3move:none3}        &
+                                        \tikzmark{3move:none2}        &
+                                        \tikzmark{3move:none1}        \\
         Ballbeförderung &
-            Ballistisch             \tikzmark{3ballmove:ball}     &
-            Abwurf                  \tikzmark{3ballmove:drop}     &
-                                    \tikzmark{3ballmove:none4}    &
-                                    \tikzmark{3ballmove:none3}    &
-                                    \tikzmark{3ballmove:none2}    &
-                                    \tikzmark{3ballmove:none1}    \\
+            Ballistisch                 \tikzmark{3ballmove:ball}     &
+            Abwurf                      \tikzmark{3ballmove:drop}     &
+                                        \tikzmark{3ballmove:none4}    &
+                                        \tikzmark{3ballmove:none3}    &
+                                        \tikzmark{3ballmove:none2}    &
+                                        \tikzmark{3ballmove:none1}    \\
         Erkennen des Korbes &
-            Distanzmessung          \tikzmark{3localize:dist}     &
-            Optische Erkennung      \tikzmark{3localize:opt}      &
-                                    \tikzmark{3localize:none4}    &
-                                    \tikzmark{3localize:none3}    &
-                                    \tikzmark{3localize:none2}    &
-                                    \tikzmark{3localize:none1}    \\
+            Distanzmessung              \tikzmark{3localize:dist}     &
+            Optische Erkennung          \tikzmark{3localize:opt}      &
+                                        \tikzmark{3localize:none4}    &
+                                        \tikzmark{3localize:none3}    &
+                                        \tikzmark{3localize:none2}    &
+                                        \tikzmark{3localize:none1}    \\
         Balllager &
-            Einzeln                 \tikzmark{3store:single}      &
-            Zusammen                \tikzmark{3store:mult}        &
-                                    \tikzmark{3store:none4}       &
-                                    \tikzmark{3store:none4}       &
-                                    \tikzmark{3store:none4}       &
-                                    \tikzmark{3store:none1}       \\
+            Einzeln                     \tikzmark{3store:single}      &
+            Zusammen                    \tikzmark{3store:mult}        &
+                                        \tikzmark{3store:none4}       &
+                                        \tikzmark{3store:none4}       &
+                                        \tikzmark{3store:none4}       &
+                                        \tikzmark{3store:none1}       \\
         Übertragung Startsignal &
-            Funk                    \tikzmark{3connect:radio}     &
-            Optisch                 \tikzmark{3connect:opt}       &
-            Ultraschall             \tikzmark{3connect:us}        &
-            Spracherkennung         \tikzmark{3connect:voice}     &
-                                    \tikzmark{3connect:none2}     &
-                                    \tikzmark{3connect:none1}     \\
+            Funk                        \tikzmark{3connect:radio}     &
+            Optisch                     \tikzmark{3connect:opt}       &
+            Ultraschall                 \tikzmark{3connect:us}        &
+            Sprach\-erkennung           \tikzmark{3connect:voice}     &
+                                        \tikzmark{3connect:none2}     &
+                                        \tikzmark{3connect:none1}     \\
         Energieversorgung &
-            intern elektrisch       \tikzmark{3power:elint}       &
-            extern elektrisch       \tikzmark{3power:elext}       &
-            Verbrennungsmotor       \tikzmark{3power:combustion}  &
-            Druckluft               \tikzmark{3power:air}         &
-            Potenzielle Energie     \tikzmark{3power:height}      &
-            Feder                   \tikzmark{3power:spring}      \\
+            intern elektrisch           \tikzmark{3power:elint}       &
+            extern elektrisch           \tikzmark{3power:elext}       &
+            Ver\-bren\-nungs\-mo\-tor   \tikzmark{3power:combustion}  &
+            Druckluft                   \tikzmark{3power:air}         &
+            Potenzielle Energie         \tikzmark{3power:height}      &
+            Feder                       \tikzmark{3power:spring}      \\
     \end{zebratabular}
     % Linien zur Darstellung von Lösungsvarianten
     \begin{tikzpicture}[remember picture,overlay]
@@ -331,26 +351,6 @@ Hierbei handelt es sich um eine Variante die nicht fahren kann. Die Schussvorric
         \item[-] Bälle werden nacheinander geschossen und ist somit zeitaufwändiger
     \end{itemize}
 \end{minipage}
-
-\subsubsection{Funktionsweise}
-Dieses Gerät lokalisiert den Korb mit optischen Sensoren und richtet die 
-Schussvorrichtung danach aus. Der Abschusswinkel bleibt fix, die Richtung und 
-Schussweite können eingestellt werden. Die Bälle werden mit einem 
-ballistischen Mechanismus abgeschossen. Angenommen, das Gerät wird im Startfeld 
-mittig an der Startlinie positioniert, und der Korb wird ganz am Rand des 
-Feldes positioniert, ergibt sich für die maximale Wurflänge 1992.49mm. Die 
-minimale Wurflänge (Korb wird mittig positioniert) beträgt 1900mm. Da der Korb 
-einen Durchmesser von 30cm hat, könnte somit immer gleich weit geschossen 
-werden, vorausgesetzt die Schussweitentoleranz beträgt weniger als ±10cm 
-(siehe Kapitel "'Berechnungen"'). Dies ist deshalb auch die grösste 
-Schwierigkeit bei dieser Variante. Da nur eine drehbare Schussvorrichtung nötig 
-ist, wird die Mechanik stark vereinfacht. Dadurch kann der Fokus auf den 
-Leichtbau gelegt werden, so dass das Projektziel, das Gewicht unter 2kg zu 
-halten, erreicht werden sollte. Die Bälle werden nacheinander geschossen. Wie 
-schnell dies passieren kann, ist abhängig von der Konstruktion und von der 
-Massenträgheit des Antriebes und dem Drehmoment des Motors. Nach ersten 
-Experimenten kann jedoch davon ausgegangen werden, dass die Frequenz sehr hoch 
-ist.
 
 \input{../doc/risk_c3}
 
