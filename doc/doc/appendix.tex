@@ -1,3 +1,50 @@
 \begin{appendix}
-\section{Anhang}
+% BLDC
+\includepdf[
+    pages=1, 
+    offset=0cm -2.5cm, 
+    frame=false, 
+    pagecommand={
+        \addcontentsline{toc}{section}{\protect\numberline{}Dokumentation BLDC Motor Treiber},
+        \thispagestyle{empty}}
+    ]{appendix/BLDC_StandaloneDoc.pdf}
+\includepdf[
+    pages=2-, 
+    offset=0cm -2.5cm, 
+    frame=false, 
+    pagecommand={
+        \thispagestyle{empty}}
+    ]{appendix/BLDC_StandaloneDoc.pdf}
+% Stepper
+\includepdf[
+    pages=1, 
+    offset=0cm -2.5cm, 
+    frame=false, 
+    pagecommand={
+        \addcontentsline{toc}{section}{\protect\numberline{}Dokumentation Schrittmotor Treiber},
+        \thispagestyle{empty}}
+    ]{appendix/Stepper_StandaloneDoc.pdf}
+\includepdf[
+    pages=2-, 
+    offset=0cm -2.5cm, 
+    frame=false, 
+    pagecommand={
+        \thispagestyle{empty}}
+    ]{appendix/Stepper_StandaloneDoc.pdf}
+% DC
+\includepdf[
+    pages=1, 
+    offset=0cm -2.5cm, 
+    frame=false, 
+    pagecommand={
+        \addcontentsline{toc}{section}{\protect\numberline{}Dokumentation DC Motor Treiber},
+        \thispagestyle{empty}}
+    ]{appendix/DC_StandaloneDoc.pdf}
+\includepdf[
+    pages=2-, 
+    offset=0cm -2.5cm, 
+    frame=false, 
+    pagecommand={
+        \thispagestyle{empty}}
+    ]{appendix/DC_StandaloneDoc.pdf}
 \end{appendix}
