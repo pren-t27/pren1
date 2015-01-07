@@ -1,11 +1,18 @@
-.PHONY: all clean
+.PHONY: all light clean
 
 all: 
 	pdflatex doc.tex
-	bibtex doc.aux
+	bibtex   doc.aux
 	pdflatex doc.tex
 	pdflatex doc.tex
 	pdflatex doc.tex
+
+light:
+	pdflatex doc_light.tex
+	bibtex   doc_light.aux
+	pdflatex doc_light.tex
+	pdflatex doc_light.tex
+	pdflatex doc_light.tex
 
 clean:
 	rm -f *.aux
