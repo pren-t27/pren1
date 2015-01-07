@@ -54,7 +54,7 @@ Es folgen diese Schritte:\\
     \end{itemize}
     \item Es folgt eine HSV-Filterung. Dafür sind beim erstellten Programm drei 
         Slider angebracht, um mit den Werten zu experimentieren und die 
-        optimalen Ergebnisse zu erzielen, beim Erzeugen eines Schwarz-Weiss Bildes.
+        optimalen Ergebnisse zu erzielen beim Erzeugen eines Schwarz-Weiss Bildes.
     \begin{itemize}
         \item Die zwei Slider für Hue und Saturation sind auf den Minimumwert 0 
             und Maximalwert 256 eingestellt. Diese können so belassen werden.
@@ -69,7 +69,7 @@ Es folgen diese Schritte:\\
     \item Nach der Filterung ist das Bild noch von „Farbrauschen“ erfüllt. 
         Dieses Rauschen wird mit dem „Eroden“ herausgefiltert.
     \begin{itemize}
-        \item Für das Erodieren wird mit einem 5$\times$5 Pixel grossem Filter gearbeitet. 
+        \item Für das Erodieren wird mit 5*5 Pixel grossem Filter gearbeitet. 
             Alles was diesem Wert entspricht wird von Weiss in Schwarz 
             umgewandelt.
         \item So werden kleine ungewollte weisse Pixel aus dem Bild entfernt.
@@ -79,7 +79,7 @@ Es folgen diese Schritte:\\
     \begin{itemize}
         \item Damit wird ungewolltes Entfernen rückgängig gemacht 
             indem die Pixelflächen wieder vergrössert werden.
-        \item Hier wird mit einem Wert von 15$\times$15 Pixeln gearbeitet.
+        \item Hier wird mit einem Wert von 15*15 Pixeln gearbeitet.
         \item Das „Dilate“-Element wird zweimal auf das Bild angewendet.
     \end{itemize}
     \item Nach diesen Massnahmen sollte nur noch der Korb als weisse Fläche 
