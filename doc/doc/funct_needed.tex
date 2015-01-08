@@ -18,16 +18,15 @@ Teilfunktionen:
     \item Übermittlung Start- / Endsignal
     \item Energieversorgung
 \end{itemize}
+Für jede dieser Teilfunktionen werden nun verschiedene Lösungsvarianten 
+erarbeitet. Dies ergibt jeweils eine Zeile des morphologischen Kastens. 
 
 \subsection{Art der Bewegung}
-\begin{itemize}
-    \item Fliegend \\
-        Das Gerät fliegt zum Korb. 
-    \item Fahrend \\
-        Das Gerät wird fahrend vor den Korb verschoben. 
-    \item Stehend \\
-        Das Gerät wird um die eigene Achse rotierend zum Korb ausgerichtet. 
-\end{itemize}
+Das Gerät muss zum Korb ausgerichtet werden. Wenn ein fliegendes Gerät gebaut 
+wird, wird das ganze Gerät oder ein Teil davon zum Korb geflogen. Wenn das 
+Gerät fahren kann, wird es fahrend vor den Korb verschoben. Wenn das Gerät an 
+einem festen Standort steht, wird es um seine eigene Achse drehend zum Korb 
+ausgerichtet. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
@@ -50,15 +49,11 @@ Teilfunktionen:
 \end{table}
 \normalsize
 
-
 \subsection{Ballbeförderung}
-\begin{itemize}
-    \item Ballistisch \\
-        Der Ball wird geworfen und fliegt auf einer ballistischen Flugbahn zum 
-        Korb. 
-    \item Abwurf \\
-        Der Ball wird von oberhalb des Korbes abgeworfen. 
-\end{itemize}
+Die Beförderung der Bälle ist abhängig von der Art der Bewegung des Gerätes. 
+Wenn das Gerät am Boden verbleibt, werden die Bälle geworfen und folgen einer 
+ballistischen Flugbahn. Bei einem Fluggerät werden die Bälle von oberhalb des 
+Korbes abgeworfen. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
@@ -81,17 +76,12 @@ Teilfunktionen:
 \end{table}
 \normalsize
 
-
 \subsection{Korberkennung}
-\begin{itemize}
-    \item Distanzmessung \\
-        Die Distanz zur Wand wird gemessen. Dabei wird die gesamte Breite 
-        gescant. An der Stelle mit der geringsten Distanz ist der Korb 
-        positioniert. 
-    \item Optische Erkennung \\
-        Das Spielfeld wird mit einer Kamera aufgezeichnet. Mittels 
-        Bildverarbeitung wird der Korb erkannt und dessen Position ermittelt. 
-\end{itemize}
+Für die Korberkennung kann ein Sensor zur Distanzmessung verwendet werden. 
+Mit diesem kann das Spielfeld gescannt werden. In der Richtung, in welche die 
+kleinste Distanz gemessen wird, befindet sich der Korb. Das Spielfeld kann 
+auch mit einer Kamera aufgenommen werden. Mittels Bildverarbeitung wird der 
+Korb erkannt und dessen Position ermittelt. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
@@ -114,14 +104,10 @@ Teilfunktionen:
 \end{table}
 \normalsize
 
-
 \subsection{Balllager}
-\begin{itemize}
-    \item Einzeln \\
-        Die Bälle werden einzeln gelagert und befördert. 
-    \item Zusammen \\
-        Die Bälle werden als eine Einheit gelagert und befördert. 
-\end{itemize}
+Das Gerät muss die Bälle vor dem Start aufnehmen. Die Bälle können einzeln 
+gelagert und befördert werden. Alternativ können die Bälle als eine Einheit 
+gelagert und beförtert werden. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
@@ -144,20 +130,13 @@ Teilfunktionen:
 \end{table}
 \normalsize
 
-
 \subsection{Übermittlung Start- / Endsignal}
-\begin{itemize}
-    \item Funk \\
-        Die Kommunikation erfolgt via elektromagnetischer Wellen. 
-    \item Optisch \\
-        Die Kommunikation erfolgt via Licht. 
-    \item Ultraschall \\
-        Die Kommunikation erfolgt via Schallwellen im Ultraschallbereich 
-        (> 20 kHz). 
-    \item Spracherkennung \\
-        Das Startsignal wird von einer Person ausgesprochen und vom Gerät 
-        mittels Spracherkennung decodiert. 
-\end{itemize}
+Da das Startsignal drahtlos übertragen werden muss, kann dafür kein Kabel 
+verwendet werden. Naheliegend ist die Verwendung von elektromagnetischen 
+Wellen (Funk). Ausserdem kann das Signal optisch mittels Lichtwellen 
+übertragen werden. Die Kommunikation kann auch mit Schallwellen im nicht 
+hörbaren Bereich (Ultraschall) erfolgen. Ist das Gerät mit einer 
+Spracherkennung ausgerüstet, kann das Gerät gesprochene Befehle interpretieren. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
@@ -180,24 +159,14 @@ Teilfunktionen:
 \end{table}
 \normalsize
 
-
 \subsection{Energieversorgung}
-\begin{itemize}
-    \item intern elektrisch \\
-        Das Gerät wird durch einen elektrochemischen Energiespeicher 
-        angetrieben. 
-    \item extern elektrisch \\
-        Das Gerät wird von einem Speisegerät mit Energie versorgt. 
-    \item Verbrennungsmotor \\
-        Das Gerät wird von einem Verbrennungsmotor angetrieben. 
-    \item Druckluft \\
-        Die Bälle werden pneumatisch befördert. 
-    \item Potenzielle Energie \\
-        Die Bälle werden nur mittels der in ihnen gespeicherten Energie 
-        befördert. 
-    \item Feder \\
-        Die Bälle werden von einer Feder beschleunigt. 
-\end{itemize}
+Das Gerät kann mit einem internen elektrischen Energiespeicher ausgerüstet 
+sein. Die elektrische Energie kann jedoch auch von extern mit einem 
+Speisegerät zur Verfügung gestellt werden. Die Bälle können auch mit Hilfe 
+eines Verbrennungsmotors angetrieben werden. Auch Druckluft kann für den 
+Antrieb des Gerätes dienen. Die Bälle können aber auch nur mithilfe von 
+potenzieller Energie beschleunigt werden, indem sie zum Beispiel eine Rampe 
+hinunterrollen. Die Bälle können auc mit einer Feder Beschleunigt werden. 
 % Morphologischer Kasten mit Stichworten
 \footnotesize
 \begin{table}[h!]
@@ -219,5 +188,4 @@ Teilfunktionen:
     \caption{Morphologischer Kasten Bereich für Energieversorgung}
 \end{table}
 \normalsize
-
 
