@@ -89,6 +89,28 @@ Schritte zur Erfüllung der Meilensteine fristgerecht zu erledigen.
 
 \begin{figure}[h!]
     \centering
+    \begin{tikzpicture}[scale=0.5]
+        % Phases
+        \draw[fill=lgray, align=center, rounded corners] (0,- 0) rectangle node {Moduleinführung\\Teambildung\\Projektinitialisierung} (-8,- 8);
+        \draw[fill=lgray, align=center, rounded corners] (0,- 8) rectangle node {Projektplanung\\Anforderungen\\Recherche} (-8,-15);
+        \draw[fill=lgray, align=center, rounded corners] (0,-15) rectangle node {Anforderungen\\Recherche} (-8,-22);
+        % Days
+        \draw[thick] (0,- 0) -- (1,- 0) node[right] {18.09.2014};
+        \draw[thick] (0,- 1) -- (1,- 1) node[right] {19.09.2014};
+        \draw[thick] (0,- 7) -- (1,- 7) node[right] {25.09.2014};
+        \draw[thick] (0,- 8) -- (1,- 8) node[right] {26.09.2014};
+        \draw[thick] (0,-14) -- (1,-14) node[right] {02.10.2014};
+        \draw[thick] (0,-15) -- (1,-15) node[right] {03.10.2014};
+        \draw[thick] (0,-21) -- (1,-21) node[right] {09.10.2014};
+        \draw[thick] (0,-22) -- (1,-22) node[right] {10.10.2014};
+        % Arrow
+        \draw[line width=4, ->] (0,0) -- (0,-22.5);
+    \end{tikzpicture}
+    \caption{Planung Meilenstein 1 (Initialisierungsphase)}
+    \label{fig:MS1}
+\end{figure}
+\begin{figure}[h!]
+    \centering
     \includegraphics[angle=90,height=0.9\textheight]{fig/PlanungBisMS1.png}
     \caption{Planung Meilenstein 1}
     \label{fig:MS1}
