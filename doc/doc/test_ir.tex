@@ -19,12 +19,12 @@ Preislich bewegt sich der Sensor im selben Rahmen wie Ultraschall Module.
     \centering
     \begin{zebratabular}{ll}
         \rowcolor{gray} Eigenschaft & Wert \\
-        Messbereich                 & 1 - 5.5m \\
+        Messbereich                 & 1 \ldots 5.5 m \\
         Interface                   & Analog \\
-        Strombedarf                 & <50mA \\
-        Spannung                    & 4.5 - 5.5V \\
+        Strombedarf                 & <50 mA \\
+        Spannung                    & 4.5 - 5.5 V \\
     \end{zebratabular}
-    \caption[Eckdaten GP2Y0A710K0F]{Eckdaten}
+    \caption[Eckdaten GP2Y0A710K0F]{Eckdaten \cite{Datasheet:GP2Y0A710K0F}}
 \end{table}
 
 \subsubsection{Testkorb}
@@ -75,7 +75,7 @@ Abtastung des Sensors ermittelt. Dazu wird die ausgesandte Infrarotstrahlung
 mittels einer Photodiode (SFH213) gemessen. Um die Diode zu entladen, wird ein 
 Widerstand mit 100 k$\Omega$ parallel an die Diode angeschlossen. 
 
-Die Messung zeigt, dass der Sensor mit Impulspaketen arbeitet. Die Pulse haben 
+\noindent Die Messung zeigt, dass der Sensor mit Impulspaketen arbeitet. Die Pulse haben 
 eine Pulsweite von 155 $\mu$s und eine Periodendauer von 1 ms. Ein Impulspaket 
 besteht aus acht Pulsen und wird alle 16 ms wiederholt. Dieser Wert deckt sich 
 mit dem vom Hersteller engegebenen Wert von 16.5 ms $\pm$ 3.7 ms. vgl. 

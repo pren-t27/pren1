@@ -13,13 +13,10 @@ Angenommen das Gerät wird im Startfeld mittig an der Startlinie positioniert,
 ausschliesslich mit einer drehbaren Abschussvorrichtung ausgerüstet, und der 
 Korb ganz am Rand des Feldes positioniert, so ergibt sich für die maximale 
 Wurflänge $l_{max}$ folgender Wert: 
-
-\[\ l_\text{max} = \sqrt{(600mm)^2 + (1900mm)^2} = 1992.49mm \]
-
-
+\[\ l_\text{max} = \sqrt{(600~mm)^2 + (1900~mm)^2} = 1992.49~mm \]
 Somit ergibt sich im schlechtesten Fall ein Längenunterschied von  9.25 cm. 
-Je nachdem wie hoch die Wurfgenauigkeit ist, können die 9.25cm in 
-Anbetracht des Korbdurchmessers von 30cm vernachlässigt werden. Unter der Voraussetzung 
+Je nachdem wie hoch die Wurfgenauigkeit ist, können die 9.25 cm in 
+Anbetracht des Korbdurchmessers von 30 cm vernachlässigt werden. Unter der Voraussetzung 
 dass die Zielgenauigkeit sehr hoch ist, kann ein Drehturm mit immer gleicher Wurflänge 
 konstruiert werden. Bei der Variante Bodenobjekt stehend (Siehe Kapitel 
 \ref{sec:var_bod_ste} und Kapitel \ref{sec:prodbeschr}.), für die wir 
@@ -34,7 +31,7 @@ geworfen wird:
 %
 \[ v_0 
     = \sqrt{ \frac{s_x}{\sin(2 \cdot \alpha)} \cdot g } 
-    = \sqrt{ \frac{1.9m}{\sin(2 \cdot 65^\circ)} \cdot 9.81 \frac{m}{s^2}} 
+    = \sqrt{ \frac{1.9~m}{\sin(2 \cdot 65^\circ)} \cdot 9.81 \frac{m}{s^2}} 
     = 4.93 \frac{m}{s} \]
 %
 Die maximale Höhe von 1.8 Metern darf nicht überschritten werden. Die Höhe 
@@ -43,29 +40,29 @@ die, der Ball erreicht lässt sich folgendermassen berechnen:
 \[ h_\text{max} 
     = \frac{v_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} 
     = \frac{4.93 \frac{m}{s}^2 \cdot \sin(65^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} 
-    = 1.018m \]
+    = 1.018~m \]
 %
 Die Zeit, die der Ball braucht, bis er im Korb ist, lässt sich folgendermassen 
 berechnen:
 %
 \[ t = \frac{s_x}{v_0 \cdot \cos(\alpha)} 
-    = \frac{1.9m}{4.93 \frac{m}{s} \cdot \cos(65^\circ)} = 0.911s \]
+    = \frac{1.9~m}{4.93 \frac{m}{s} \cdot \cos(65^\circ)} = 0.911~s \]
 %
 Nun werden die gleichen Rechnungen mit einem Winkel von 70$^\circ$ durchgeführt:
 %
 \[ v_0 = \sqrt{ \frac{s_x}{\sin(2\alpha)} \cdot g } 
-    = \sqrt{ \frac{1.9m}{\sin(2 \cdot 70^\circ)} \cdot 9.81 \frac{m}{s^2}} 
+    = \sqrt{ \frac{1.9~m}{\sin(2 \cdot 70^\circ)} \cdot 9.81 \frac{m}{s^2}} 
     = 5.385 \frac{m}{s} \]
 
 \[ h_\text{max} = \frac{v_0^2 \cdot \sin(\alpha)^2}{2 \cdot g} 
     = \frac{5.385 \frac{m}{s}^2 \cdot \sin(70^\circ)^2}{2 \cdot 9.81 \frac{m}{s^2}} 
-    = 1.305m \]
+    = 1.305~m \]
 
 \[ t = \frac{s_x}{v_0 \cdot \cos(\alpha)} 
-    = \frac{1.9m}{5.385 \frac{m}{s} \cdot \cos(70^\circ)} = 1.032s \]
+    = \frac{1.9~m}{5.385 \frac{m}{s} \cdot \cos(70^\circ)} = 1.032~s \]
 %
 Wenn man davon ausgeht, dass es sich bei der Abschussgeschwindigkeit ein 
-absoluter Fehler von $\pm$ 0.3 m/s einstellt, kann berechnet werden, mit 
+absoluter Fehler von $\pm$ 0.3 $\frac{m}{s}$ einstellt, kann berechnet werden, mit 
 welchem Winkel die Distanz mehr variiert:
 
 \noindent
@@ -74,17 +71,17 @@ Winkel 65$^\circ$:
 \[ s_x = \frac{(v_0 \pm \Delta v)^2 \cdot \sin(2 \cdot \alpha)}{g} 
     = \frac{(4.93 \frac{m}{s} \pm 0.3 \frac{m}{s})^2 \cdot \sin(2 \cdot 65^\circ)}{9.81 \frac{m}{s^2}} \]
 
-\[ s_\text{xmax} = 2.136m \hspace{30mm} s_\text{xmin} = 1.674m \]
+\[ s_\text{xmax} = 2.136~m \qquad s_\text{xmin} = 1.674~m \]
 %
 Winkel 70$^\circ$:
 %
 \[ s_x = \frac{(v_0 \pm \Delta v)^2 \cdot \sin(2 \cdot \alpha)}{g} 
     = \frac{(5.385 \frac{m}{s} \pm 0.3 \frac{m}{s})^2 \cdot \sin(2 \cdot 70^\circ)}{9.81 \frac{m}{s^2}} \]
 
-\[ s_\text{xmax} = 2.118m \hspace{30mm} s_\text{xmin} = 1.694m \]
+\[ s_\text{xmax} = 2.118~m \qquad s_\text{xmin} = 1.694~m \]
 %
-Bei einer Abschussgeschwindigkeitsänderung von lediglich $\pm$ 0.3m/s ergibt 
-sich bereits eine Abweichung der Wurfweite von $\pm$ 20-25cm. Die 
+Bei einer Abschussgeschwindigkeitsänderung von lediglich $\pm$ 0.3 $\frac{m}{s}$ ergibt 
+sich bereits eine Abweichung der Wurfweite von $\pm$ 20\ldots25 cm. Die 
 Geschwindigkeit muss sehr genau eingestellt werden können und sehr konstant sein.
 
 \noindent
