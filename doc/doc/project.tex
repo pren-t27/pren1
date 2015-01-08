@@ -89,11 +89,11 @@ Schritte zur Erfüllung der Meilensteine fristgerecht zu erledigen.
 
 \begin{figure}[h!]
     \centering
-    \begin{tikzpicture}[scale=0.5]
+    \begin{tikzpicture}[scale=0.45]
         % Phases
-        \draw[fill=lgray, align=center, rounded corners] (0,- 0) rectangle node {Moduleinführung\\Teambildung\\Projektinitialisierung} (-8,- 8);
-        \draw[fill=lgray, align=center, rounded corners] (0,- 8) rectangle node {Projektplanung\\Anforderungen\\Recherche} (-8,-15);
-        \draw[fill=lgray, align=center, rounded corners] (0,-15) rectangle node {Anforderungen\\Recherche} (-8,-22);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,- 0) rectangle node {Moduleinführung\\\\Teambildung\\\\Projektinitialisierung} (-13,- 8);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,- 8) rectangle node {Projektplanung\\\\Anforderungen\\\\Recherche} (-13,-15);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,-15) rectangle node {Anforderungen\\\\Recherche} (-13,-22);
         % Days
         \draw[thick] (0,- 0) -- (1,- 0) node[right] {18.09.2014};
         \draw[thick] (0,- 1) -- (1,- 1) node[right] {19.09.2014};
@@ -104,26 +104,56 @@ Schritte zur Erfüllung der Meilensteine fristgerecht zu erledigen.
         \draw[thick] (0,-21) -- (1,-21) node[right] {09.10.2014};
         \draw[thick] (0,-22) -- (1,-22) node[right] {10.10.2014};
         % Arrow
-        \draw[line width=4, ->] (0,0) -- (0,-22.5);
+        \draw[line width=4, ->] (0,0) -- (0,-23);
     \end{tikzpicture}
     \caption{Planung Meilenstein 1 (Initialisierungsphase)}
     \label{fig:MS1}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[angle=90,height=0.9\textheight]{fig/PlanungBisMS1.png}
-    \caption{Planung Meilenstein 1}
+    \begin{tikzpicture}[scale=0.45]
+        % Phases
+        \draw[fill=lgray, align=center, rounded corners=10] (0,- 0) rectangle node {Kombinieren der Lösungsprinzipien\\\\Berechnungen} (-13,- 7);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,- 7) rectangle node {Konzeptentwurf\\\\Systementwurf} (-13,-14);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,-14) rectangle node {Konzeptentwurf\\\\Systementwurf} (-13,-21);
+        % Days
+        \draw[thick] (0,- 0) -- (1,- 0) node[right] {10.10.2014};
+        \draw[thick] (0,- 6) -- (1,- 6) node[right] {16.10.2014};
+        \draw[thick] (0,- 7) -- (1,- 7) node[right] {17.10.2014};
+        \draw[thick] (0,-13) -- (1,-13) node[right] {23.10.2014};
+        \draw[thick] (0,-14) -- (1,-14) node[right] {24.10.2014};
+        \draw[thick] (0,-20) -- (1,-20) node[right] {30.10.2014};
+        \draw[thick] (0,-21) -- (1,-21) node[right] {31.10.2014};
+        % Arrow
+        \draw[line width=4, ->] (0,0) -- (0,-22);
+    \end{tikzpicture}
+    \caption{Planung Meilenstein 2 (Konzeptphase)}
     \label{fig:MS1}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[angle=90,height=0.9\textheight]{fig/PlanungBisMS2.png}
-    \caption{Planung Meilenstein 2}
-    \label{fig:MS2}
-\end{figure}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[angle=90,height=0.9\textheight]{fig/PlanungBisMS3.png}
-    \caption{Planung Meilenstein 3}
-    \label{fig:MS3}
+    \begin{tikzpicture}[scale=0.45]
+        % Phases
+        \draw[fill=lgray, align=center, rounded corners=10] (0,- 0) rectangle node {Kombinieren der Lösungsprinzipien\\\\Analysieren \& Berechnen} (-13,-14);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,-14) rectangle node {Konzeptentwurf\\\\Systementwurf} (-13,-28);
+        \draw[fill=lgray, align=center, rounded corners=10] (0,-28) rectangle node {Abschluss PREN1\\\\Dokumentation fertigstellen} (-13,-42);
+        % Days
+        \draw[thick] (0,- 0) -- (1,- 0) node[right] {31.10.2014};
+        \draw[thick] (0,- 6) -- (1,- 6) node[right] {06.11.2014};
+        \draw[thick] (0,- 7) -- (1,- 7) node[right] {07.11.2014};
+        \draw[thick] (0,-13) -- (1,-13) node[right] {13.11.2014};
+        \draw[thick] (0,-14) -- (1,-14) node[right] {14.11.2014};
+        \draw[thick] (0,-20) -- (1,-20) node[right] {20.11.2014};
+        \draw[thick] (0,-21) -- (1,-21) node[right] {21.11.2014};
+        \draw[thick] (0,-27) -- (1,-27) node[right] {27.11.2014};
+        \draw[thick] (0,-28) -- (1,-28) node[right] {28.11.2014};
+        \draw[thick] (0,-34) -- (1,-34) node[right] {04.12.2014};
+        \draw[thick] (0,-35) -- (1,-35) node[right] {05.12.2014};
+        \draw[thick] (0,-41) -- (1,-41) node[right] {11.12.2014};
+        \draw[thick] (0,-42) -- (1,-42) node[right] {12.12.2014};
+        % Arrow
+        \draw[line width=4, ->] (0,0) -- (0,-43);
+    \end{tikzpicture}
+    \caption{Planung Meilenstein 3 (Systementwurfsphase)}
+    \label{fig:MS1}
 \end{figure}
