@@ -16,7 +16,13 @@
 % Farben
     \usepackage{color}          % Farben
     \usepackage{colortbl}       % Tabellen einfärben
-    \usepackage[table]{xcolor}  % 
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{beamer}{
+        % Do not load package xcolor in beamer class as beamer class loads xcolor
+    }{
+        \usepackage[table]{xcolor}  % 
+    }
+    \makeatother        % @ wieder anderes Zeichen
 
 % Eigene definierte Farben
     \definecolor{gray}      {gray}  {0.749}
@@ -200,8 +206,14 @@
     \makeatother        % @ wieder anderes Zeichen
 
 %  Inhalt Kopf- und Fusszeile
-    \pagestyle{fancy}                           % eigener Seitenstil
-    \fancyhf{}                                  % alle Kopf- und Fusszeilenfelder bereinigen
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{beamer}{
+        % Do not change pagestyle, if using beamer class
+    }{
+        \pagestyle{fancy}                           % eigener Seitenstil
+        \fancyhf{}                                  % alle Kopf- und Fusszeilenfelder bereinigen
+    }
+    \makeatother        % @ wieder anderes Zeichen
 
     % Kopf- und Fusszeile für Artikel
     \makeatletter       % @ Teil des Befehls
