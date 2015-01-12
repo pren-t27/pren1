@@ -1,11 +1,20 @@
-.PHONY: all clean
+.PHONY: all pres handout clean
 
-all: 
+all: pres handout
+
+pres:
 	pdflatex pres.tex
 	#bibtex   pres.aux
 	pdflatex pres.tex
 	pdflatex pres.tex
 	pdflatex pres.tex
+
+handout:
+	pdflatex pres_handout.tex
+	#bibtex   pres_handout.aux
+	pdflatex pres_handout.tex
+	pdflatex pres_handout.tex
+	pdflatex pres_handout.tex
 
 clean:
 	rm -f *.aux
