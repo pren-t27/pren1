@@ -50,6 +50,14 @@
         \usetikzlibrary{tikzmark}   % References for hooking tikz graphics to
     \usepackage{tikz-timing}    % For drawing timing diagrams with tikz
 
+% Video
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{beamer}{
+        \usepackage{multimedia}
+    }{
+    }
+    \makeatother        % @ wieder anderes Zeichen
+
 % Mathematik
     \usepackage{amsmath}        % Strukturierung von Formeln
     \usepackage{amssymb}        % Sonderzeichen für Formeln
