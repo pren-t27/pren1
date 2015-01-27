@@ -10,7 +10,7 @@
                 \end{itemize}
                 \pause
                 \begin{figure}
-                    \begin{tikzpicture}[scale=1.5]
+                    \begin{tikzpicture}[scale=1.72]
                         % Grid
                         % Grid for Angle
                         \foreach \i in {0, 10, ..., 90}
@@ -28,8 +28,9 @@
                         }
                         % Axis
                         \draw[->] (0:0) -- (0:2);
-                        \draw[->] (0:0) -- (90:2) node[left] {$D$ [cm]};
-                        \node at (0.5, 2.1) {$\alpha$ [$^\circ$]};
+                        \draw[->] (0:0) -- (90:2);
+                        %\draw[->] (0:0) -- (90:2) node[left] {$D$ [cm]};
+                        %\node at (0.5, 2.1) {$\alpha$ [$^\circ$]};
                         % Data
                         \draw[thick, blue]
                             (90 - 0  : 1.80) --
