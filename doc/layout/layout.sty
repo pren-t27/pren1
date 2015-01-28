@@ -45,7 +45,13 @@
     \usepackage{graphicx}       % Grafiken einbinden
     \usepackage{pdfpages}       % PDF Seiten einbinden
     \usepackage{caption}        % Bildunterschrift
-    \usepackage{subcaption}     % Bildunterschrift unter zusammen dargestellten Bildern
+    \makeatletter       % @ Teil des Befehls
+    \@ifclassloaded{beamer}{
+        % Do not load package subcaption in beamer class
+    }{ 
+        \usepackage{subcaption}     % Bildunterschrift unter zusammen dargestellten Bildern
+    }
+    \makeatother        % @ wieder anderes Zeichen
     \usepackage{tikz}           % TikZ - "TikZ ist kein Zeichenprogramm"
         \usetikzlibrary{tikzmark}   % References for hooking tikz graphics to
     \usepackage{tikz-timing}    % For drawing timing diagrams with tikz
